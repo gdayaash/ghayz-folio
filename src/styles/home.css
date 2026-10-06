@@ -1,0 +1,125 @@
+.gradient-text {
+  background: linear-gradient(90deg, #001110, #03b197, #001110);
+
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradient-flow 10s ease-in-out infinite;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.timeline-section-wrapper {
+  margin: 60px auto 180px auto;
+}
+
+.timeline-section-gradient-effect {
+  background: linear-gradient(
+    358deg,
+    #0b855e 45%,
+    #086145 64%,
+    #041d16 86%,
+    #001110 100%
+  );
+  padding: 60px 80px;
+}
+
+.glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 465px;
+  min-width: 400px;
+  max-width: 465px;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.5) 35%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.35) 70%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.y-folio__timeline-card-description {
+  text-wrap: wrap;
+  font-size: 24px;
+  white-space: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.y-folio__timeline-gradient-circle {
+  width: 800px;
+  height: 800px;
+  background: linear-gradient(
+    340deg,
+    #f8f9fa 0%,
+    #ffffff 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  bottom: -551px;
+  right: -33px;
+  filter: blur(100px);
+}
+
+.y-folio__passion-wrapper {
+  margin: 180px auto;
+}
+
+.y-folio__passion-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.y-folio__passion-card-title-area {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}

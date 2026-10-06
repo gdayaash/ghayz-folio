@@ -1,0 +1,170 @@
+/* =========================================================
+   SELECTED WORKS TITLE
+========================================================= */
+
+.y-folio__selected-works-title-text-span-second {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-top: -62px;
+  margin-left: 14px;
+}
+
+/* =========================================================
+   SCENE
+========================================================= */
+
+.y-folio__selected-works-scene {
+  position: relative;
+}
+
+.y-folio__selected-works-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.y-folio__selected-works-scene-middle {
+  position: relative;
+}
+
+.y-folio__selected-works-middle-track {
+  position: relative;
+  min-height: 100%;
+}
+
+.y-folio__selected-works-middle-sticky {
+  position: sticky;
+  top: 0;
+
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   CENTER DASHED LINE
+========================================================= */
+
+.y-folio__selected-works-line {
+  /*
+   * Dashed cyan line
+   */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 218, 0.9) 0,
+    rgba(0, 255, 218, 0.9) 8px,
+    transparent 8px,
+    transparent 18px
+  );
+
+  /*
+   * Fade the line into the background
+   * at both ends.
+   */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.12) 15%,
+    rgba(0, 0, 0, 0.45) 28%,
+    rgba(0, 0, 0, 0.8) 40%,
+    #000 50%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.45) 72%,
+    rgba(0, 0, 0, 0.12) 85%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.12) 15%,
+    rgba(0, 0, 0, 0.45) 28%,
+    rgba(0, 0, 0, 0.8) 40%,
+    #000 50%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.45) 72%,
+    rgba(0, 0, 0, 0.12) 85%,
+    transparent 100%
+  );
+
+  z-index: 1;
+}
+
+/* =========================================================
+   POINTER
+========================================================= */
+
+.y-folio__selected-works-pointer {
+  background: #00ffda;
+
+  box-shadow:
+    0 0 8px rgba(0, 255, 218, 1),
+    0 0 18px rgba(0, 255, 218, 0.95),
+    0 0 35px rgba(0, 255, 218, 0.75),
+    0 0 65px rgba(0, 255, 218, 0.4);
+
+  z-index: 10;
+}
+
+/* =========================================================
+   SELECTED WORK CARD
+========================================================= */
+
+.y-folio__selected-work-card {
+  width: 478px;
+  max-width: 478px;
+
+  padding: 52px 43px 0;
+
+  border: 2px solid transparent;
+  border-radius: 60px;
+
+  background:
+    linear-gradient(rgba(15, 21, 20, 0.96), rgba(15, 21, 20, 0.96)) padding-box,
+    conic-gradient(
+        from 0deg,
+
+        rgba(167, 230, 210, 0.15) 0deg,
+        rgba(167, 230, 210, 0.15) 83deg,
+
+        #a7e6d2 135deg,
+        rgba(167, 230, 210, 0.15) 165deg,
+
+        rgba(167, 230, 210, 0.08) 180deg,
+        rgba(167, 230, 210, 0.08) 290deg,
+
+        #a7e6d2 315deg,
+        rgba(167, 230, 210, 0.15) 345deg,
+
+        rgba(167, 230, 210, 0.15) 360deg
+      )
+      border-box;
+}
+
+.y-folio__selected-works-active-line {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 255, 218, 0.1) 10%,
+    rgba(0, 255, 218, 0.5) 30%,
+    #00ffda 50%,
+    rgba(0, 255, 218, 0.5) 70%,
+    rgba(0, 255, 218, 0.1) 90%,
+    transparent 100%
+  );
+
+  filter: blur(0.5px) drop-shadow(0 0 4px rgba(0, 255, 218, 0.8))
+    drop-shadow(0 0 10px rgba(0, 255, 218, 0.45));
+}
+
+/* =========================================================
+   CARD TYPOGRAPHY
+========================================================= */
+
+.y-folio__selected-work-card-title {
+  font-size: 32px;
+}
+
+.y-folio__selected-work-card-description {
+  font-size: 24px;
+}

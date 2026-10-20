@@ -29,7 +29,7 @@
     minmax(0, 1fr)
     minmax(60px, 0.2fr)
     minmax(0, 1fr);
-  grid-template-rows: repeat(3, minmax(32rem, auto));
+  grid-template-rows: repeat(6, minmax(32rem, auto));
   column-gap: 1.5rem;
   row-gap: 1rem;
 }
@@ -94,6 +94,18 @@
 
 .y-folio__selected-work-card-slot--row-3 {
   grid-row: 3;
+}
+
+.y-folio__selected-work-card-slot--row-4 {
+  grid-row: 4;
+}
+
+.y-folio__selected-work-card-slot--row-5 {
+  grid-row: 5;
+}
+
+.y-folio__selected-work-card-slot--row-6 {
+  grid-row: 6;
 }
 
 /* =========================================================
@@ -209,7 +221,7 @@
 /* =========================================================
    SELECTED WORK CARD
 ========================================================= */
-
+/* 
 .y-folio__selected-work-card {
   width: 100%;
   max-width: 478px;
@@ -240,7 +252,50 @@
 
 .y-folio__selected-work-card-description {
   font-size: 24px;
+} */
+
+
+/* =========================================================
+   SELECTED WORK CARD
+========================================================= */
+
+.y-folio__selected-work-card {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  max-width: 478px;
+  padding: 28px 28px 0;
+
+  border: 2px solid transparent;
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      rgba(15, 21, 20, 0.98),
+      rgba(15, 21, 20, 0.98)
+    ) padding-box,
+    linear-gradient(
+      135deg,
+      #a7e6d2 0%,
+      rgba(167, 230, 210, 0.7) 3%,
+      rgba(167, 230, 210, 0.12) 32%,
+      rgba(167, 230, 210, 0.06) 17%,
+      rgba(167, 230, 210, 0.18) 72%,
+      rgba(167, 230, 210, 0.65) 88%,
+      #a7e6d2 100%
+    ) border-box;
 }
+
+.y-folio__selected-work-card-title {
+  font-size: 32px;
+}
+
+.y-folio__selected-work-card-description {
+  font-size: 24px;
+}
+
+
 
 /* =========================================================
    TABLET
@@ -252,7 +307,7 @@
       minmax(0, 1fr)
       minmax(40px, 0.15fr)
       minmax(0, 1fr);
-    grid-template-rows: repeat(3, minmax(30rem, auto));
+    grid-template-rows: repeat(6, minmax(30rem, auto));
     column-gap: 1rem;
     row-gap: 1rem;
   }

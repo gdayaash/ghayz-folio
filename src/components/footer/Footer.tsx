@@ -61,7 +61,7 @@ export default function Footer({
           <div
             className={`y-folio__social-icons flex items-center gap-x-2 ${textColorClass}`}
           >
-            <a href="" target="_blank">
+            <a href="https://www.instagram.com/low_lightings?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==" target="_blank">
               <InstagramLogoIcon size={26} />
             </a>
 

@@ -272,11 +272,11 @@ import TimelineCard from "./TimeLineCard";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
 const timelineCards = [
-  {
+    {
     id: 1,
     title: "Waitlist to Creator Network",
     description:
-      "Turning an existing creator database into a verified network.",
+      "Turning an existing creator database into an verified network.",
   },
   {
     id: 2,
@@ -288,9 +288,34 @@ const timelineCards = [
     id: 3,
     title: "Agency Pitch Into a Story",
     description:
-      "Designing Qoruz's client deck to communicate expertise, execution and credibility within seconds.",
+      "This is abt he detailed explanation of project, which last 2 lines",
   },
+
 ];
+
+// const works = [
+//   {
+//     id: 1,
+//     title: "Waitlist",
+//     description:
+//       "This is abt he detailed explanation of project, which last 2 lines",
+//     image: "/images/case-study/waitlist-bg.png",
+//   },
+//   {
+//     id: 2,
+//     title: "Creator",
+//     description:
+//       "This is abt he detailed explanation of project, which last 2 lines",
+//     image: "/images/case-study/creator-bg.png",
+//   },
+//   {
+//     id: 3,
+//     title: "Agency",
+//     description:
+//       "This is abt he detailed explanation of project, which last 2 lines",
+//     image: "/images/case-study/agency-bg.png",
+//   },
+// ];
 
 export default function TimelineSection() {
   const sectionRef = useRef<HTMLDivElement>(null);

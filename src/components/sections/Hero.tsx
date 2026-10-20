@@ -128,7 +128,7 @@ function Hero() {
             </a>
 
             <a
-              href="#works"
+              href="/works"
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] border-2 border-solid border-[#03B197] bg-transparent px-2 py-[10px] text-sm font-normal text-black transition-colors hover:bg-[#03B197]/10 sm:gap-3 sm:px-3 sm:text-base md:px-[32px]"
             >
               <Files

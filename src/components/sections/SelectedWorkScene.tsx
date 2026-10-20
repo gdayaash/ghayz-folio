@@ -5,28 +5,53 @@ import { gsap, ScrollTrigger } from "@/lib/animations/gsap";
 import SelectedWorkCard from "../cards/SelectedWorkCard";
 
 const works = [
-  {
+   {
     id: 1,
-    title: "Waitlist",
+    title: "HashFame | Pre-Launch",
     description:
-      "This is abt he detailed explanation of project, which last 2 lines",
-    image: "/images/case-study/waitlist-bg.png",
+      "Building a Network Before the App",
+      image: "/images/case-study/waitlist-bg.png",
   },
   {
     id: 2,
-    title: "Creator",
+    title: "HashFame | Post-Launch",
     description:
-      "This is abt he detailed explanation of project, which last 2 lines",
-    image: "/images/case-study/creator-bg.png",
+      "Turning Existing Profiles into Active Creators",
+      image: "/images/case-study/creator-bg.png",
   },
   {
     id: 3,
-    title: "Agency",
+    title: "Qoruz | Decks Redesign",
     description:
-      "This is abt he detailed explanation of project, which last 2 lines",
-    image: "/images/case-study/agency-bg.png",
+      "Making the Product Its Own Salesperson",
+       image: "/images/case-study/agency-bg.png",
+  },
+    {
+    id: 4,
+    title: "HashFame | Website Redesign",
+    description:
+      "Designed to Make an Impression",
+       image: "/images/case-study/agency-bg.png",
+
+  },
+    {
+    id: 5,
+    title: "Qoruz | Nexus AI",
+    description:
+      "Making Complex AI Feel Simple.",
+       image: "/images/case-study/agency-bg.png",
+
+  },
+  {
+    id: 6,
+    title: "HashFame | Marketing & Visuals",
+    description:
+      "Making Every Feature a Story",
+       image: "/images/case-study/agency-bg.png",
+
   },
 ];
+
 
 export default function SelectedWorksScene() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -193,6 +218,7 @@ export default function SelectedWorksScene() {
     <section ref={sectionRef} className="y-folio__selected-works-scene-wrapper">
       <div className="container y-folio__selected-works-scene mx-auto">
         <div className="y-folio__selected-works-grid">
+          
           {/* Timeline */}
           <div className="y-folio__selected-works-center">
             <div className="y-folio__selected-works-center-sticky">
@@ -214,11 +240,11 @@ export default function SelectedWorksScene() {
             </div>
           </div>
 
-          {/* First card: right */}
+          {/* First card: left */}
           <div
             className="
               y-folio__selected-work-card-slot
-              y-folio__selected-work-card-slot--right
+              y-folio__selected-work-card-slot--left
               y-folio__selected-work-card-slot--row-1
             "
           >
@@ -229,11 +255,11 @@ export default function SelectedWorksScene() {
             />
           </div>
 
-          {/* Second card: left */}
+          {/* Second card: right */}
           <div
             className="
               y-folio__selected-work-card-slot
-              y-folio__selected-work-card-slot--left
+              y-folio__selected-work-card-slot--right
               y-folio__selected-work-card-slot--row-2
             "
           >
@@ -244,11 +270,11 @@ export default function SelectedWorksScene() {
             />
           </div>
 
-          {/* Third card: right */}
+          {/* Third card: left */}
           <div
             className="
               y-folio__selected-work-card-slot
-              y-folio__selected-work-card-slot--right
+              y-folio__selected-work-card-slot--left
               y-folio__selected-work-card-slot--row-3
             "
           >
@@ -258,6 +284,52 @@ export default function SelectedWorksScene() {
               image={works[2].image}
             />
           </div>
+
+          {/* Fourth card: right */}
+          <div
+            className="
+              y-folio__selected-work-card-slot
+              y-folio__selected-work-card-slot--right
+              y-folio__selected-work-card-slot--row-4
+            "
+          >
+            <SelectedWorkCard
+              title={works[3].title}
+              description={works[3].description}
+              image={works[3].image}
+            />
+          </div>
+
+          {/* Fifth card: left */}
+          <div
+            className="
+              y-folio__selected-work-card-slot
+              y-folio__selected-work-card-slot--left
+              y-folio__selected-work-card-slot--row-5
+            "
+          >
+            <SelectedWorkCard
+              title={works[4].title}
+              description={works[4].description}
+              image={works[4].image}
+            />
+          </div>
+
+          {/* Sixth card: right */}
+          <div
+            className="
+              y-folio__selected-work-card-slot
+              y-folio__selected-work-card-slot--right
+              y-folio__selected-work-card-slot--row-6
+            "
+          >
+            <SelectedWorkCard
+              title={works[5].title}
+              description={works[5].description}
+              image={works[5].image}
+            />
+          </div>
+          
         </div>
       </div>
     </section>

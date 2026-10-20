@@ -24,11 +24,18 @@
   }
 }
 
+/* ========================================
+   Timeline
+======================================== */
+
 .timeline-section-wrapper {
-  margin: 60px auto 180px auto;
+  width: 70%;
+  margin: 60px auto 180px;
 }
 
 .timeline-section-gradient-effect {
+  position: relative;
+
   background: linear-gradient(
     358deg,
     #0b855e 45%,
@@ -36,31 +43,46 @@
     #041d16 86%,
     #001110 100%
   );
+
   padding: 60px 80px;
 }
 
+/* ========================================
+   Glass Card
+======================================== */
+
 .glass-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 40px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
   display: inline-flex;
-  padding: 40px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+
   width: 465px;
   min-width: 400px;
   max-width: 465px;
+
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 40px;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .glass-card::before {
   content: "";
+
   position: absolute;
   inset: 0;
+
   padding: 1.5px;
+
   border-radius: inherit;
 
   background: linear-gradient(
@@ -86,28 +108,47 @@
   pointer-events: none;
 }
 
+/* ========================================
+   Timeline Card Content
+======================================== */
+
 .y-folio__timeline-card-description {
   text-wrap: wrap;
   font-size: 24px;
+  line-height: 1.5;
   white-space: normal;
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* ========================================
+   Timeline Glow
+======================================== */
+
 .y-folio__timeline-gradient-circle {
   width: 800px;
   height: 800px;
+
+  position: absolute;
+  right: -33px;
+  bottom: -551px;
+
   background: linear-gradient(
     340deg,
     #f8f9fa 0%,
     #ffffff 40%,
     rgba(255, 255, 255, 0) 100%
   );
+
   border-radius: 50%;
-  position: absolute;
-  bottom: -551px;
-  right: -33px;
+
   filter: blur(100px);
+
+  pointer-events: none;
 }
+
+/* ========================================
+   Passion
+======================================== */
 
 .y-folio__passion-wrapper {
   margin: 180px auto;
@@ -122,4 +163,181 @@
 .y-folio__passion-card-title-area {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+/* Contact Us */
+
+.y-folio__contact-us-box {
+  background: linear-gradient(
+    178deg,
+    #0b855e 45%,
+    #086145 64%,
+    #041d16 86%,
+    #001110 100%
+  );
+}
+
+/* Footer  */
+
+.y-folio__footer-wrapper {
+  background-image: url("/images/footerwhite.png");
+  background-size: cover;
+  padding: 60px 20px;
+}
+
+/* ========================================
+   Tablet
+   768px - 1023px
+======================================== */
+
+@media (max-width: 1023px) {
+  .timeline-section-wrapper {
+    width: 90%;
+    margin: 50px auto 140px;
+  }
+
+  .timeline-section-gradient-effect {
+    padding: 50px 40px;
+  }
+
+  .glass-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 465px;
+
+    padding: 32px;
+
+    border-radius: 32px;
+  }
+
+  .y-folio__timeline-card-description {
+    font-size: 20px;
+  }
+
+  .y-folio__timeline-gradient-circle {
+    width: 600px;
+    height: 600px;
+
+    right: -250px;
+    bottom: -400px;
+
+    filter: blur(80px);
+  }
+
+  .y-folio__passion-wrapper {
+    margin: 140px auto;
+  }
+
+  .y-folio__passion-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ========================================
+   Mobile
+   < 768px
+======================================== */
+
+@media (max-width: 767px) {
+  .timeline-section-wrapper {
+    width: calc(100% - 2rem);
+    margin: 40px auto 100px;
+  }
+
+  .timeline-section-gradient-effect {
+    padding: 32px 20px;
+  }
+
+  .glass-card {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+    gap: 8px;
+  }
+
+  .y-folio__timeline-card-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .y-folio__timeline-gradient-circle {
+    width: 450px;
+    height: 450px;
+
+    right: -220px;
+    bottom: -300px;
+
+    filter: blur(60px);
+  }
+
+  .y-folio__passion-wrapper {
+    margin: 100px auto;
+  }
+
+  .y-folio__passion-cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ========================================
+   Small Mobile
+   < 480px
+======================================== */
+
+@media (max-width: 479px) {
+  .y-folio__left-hang-image {
+    width: 50%;
+  }
+
+  .y-folio__right-hang-on {
+    bottom: 10px;
+  }
+
+  .y-folio__right-hang-on {
+    width: 30%;
+  }
+
+  .timeline-section-wrapper {
+    width: calc(100% - 1.5rem);
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .timeline-section-gradient-effect {
+    padding: 28px 16px;
+  }
+
+  .glass-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .y-folio__timeline-card-description {
+    font-size: 15px;
+  }
+
+  .y-folio__timeline-gradient-circle {
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+    bottom: -240px;
+
+    filter: blur(50px);
+  }
+
+  .y-folio__passion-wrapper {
+    margin: 80px auto;
+  }
+
+  .y-folio__passion-cards-wrapper {
+    gap: 16px;
+  }
 }

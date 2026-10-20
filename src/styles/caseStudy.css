@@ -1,0 +1,185 @@
+
+/* ========================================
+   CASE STUDY — GLASS CARDS
+======================================== */
+
+.glass-card-case-study {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 465px;
+  min-height: 100%;
+
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+
+  border-radius: 24px;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  overflow-wrap: anywhere;
+}
+
+.glass-card-case-study::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.5) 35%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.35) 70%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* ========================================
+   CASE STUDY — NAVIGATION
+======================================== */
+
+.y-folio__case-study-nav-box {
+  background: linear-gradient(
+    178deg,
+    #0b855e 45%,
+    #086145 64%,
+    #041d16 86%,
+    #001110 100%
+  );
+}
+
+/* ========================================
+   CASE STUDY — PAGE WIDTH
+======================================== */
+
+.y-folio__case-study-waitlist-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.y-folio__case-study-banner-area,
+.y-folio__case-study-banner-image,
+.y-folio__case-study-objective-wrapper,
+.y-folio__case-study-waitlist-project-overview,
+.y-folio__case-study-problems-found,
+.y-folio__approach-wrapper,
+.y-folio__case-study-designs,
+.y-folio__case-study-business-impact {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.y-folio__case-study-banner-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   CASE STUDY — FIGMA EMBED
+======================================== */
+
+.y-folio__case-study-iframe-box {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  isolation: isolate;
+}
+
+.y-folio__case-study-iframe-box iframe {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+/* ========================================
+   CASE STUDY — COMMENTS
+======================================== */
+
+.y-folio__problems-found-comment-box {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   CASE STUDY — TABLET
+======================================== */
+
+@media (min-width: 640px) {
+  .glass-card-case-study {
+    padding: 32px;
+    border-radius: 32px;
+  }
+
+  .y-folio__case-study-iframe-box {
+    border-radius: 16px;
+  }
+}
+
+/* ========================================
+   CASE STUDY — DESKTOP
+======================================== */
+
+@media (min-width: 1024px) {
+  .glass-card-case-study {
+    padding: 60px 40px;
+    border-radius: 40px;
+  }
+}
+
+/* ========================================
+   CASE STUDY — SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+  .glass-card-case-study {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .y-folio__case-study-iframe-box {
+    border-radius: 8px;
+  }
+}

@@ -2,7 +2,6 @@
 
 import { useLayoutEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "@/lib/animations/gsap";
-
 import PassionCard from "../cards/PassionCard";
 
 export default function PassionSection() {
@@ -15,9 +14,6 @@ export default function PassionSection() {
 
     const ctx = gsap.context(() => {
       const cards = gsap.utils.toArray<HTMLElement>(".y-folio__passion-card");
-
-      console.log("Cards:", cards.length);
-      console.log("ScrollTrigger:", ScrollTrigger);
 
       cards.forEach((card) => {
         const title = card.querySelector<HTMLElement>(
@@ -33,12 +29,6 @@ export default function PassionSection() {
         );
 
         if (!title || !subtitle || !image) {
-          console.log("Missing element", {
-            title,
-            subtitle,
-            image,
-          });
-
           return;
         }
 
@@ -90,31 +80,52 @@ export default function PassionSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="y-folio__passion-wrapper">
+    <section
+      ref={sectionRef}
+      id="passion"
+      className="y-folio__passion-wrapper px-4 py-16 sm:px-6 sm:py-20 lg:px-0 lg:py-24"
+    >
       <div className="container mx-auto">
+        {/* Heading */}
         <div className="y-folio__passion-heading-area">
-          <h2 className="y-folio__passion-section-title text-center font-semibold text-[clamp(1.75rem,4vw,3rem)]">
-            Passion
+          <h2 className="y-folio__passion-section-title text-center text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight">
+            Beyond the Interface
           </h2>
         </div>
 
-        <div className="y-folio__passion-cards-wrapper mt-16">
+        {/* Cards */}
+        <div
+          className="
+            y-folio__passion-cards-wrapper
+            mt-10
+            grid
+            grid-cols-1
+            gap-6
+            sm:mt-12
+            sm:grid-cols-1
+            sm:gap-7
+            md:grid-cols-2
+            lg:mt-16
+            lg:grid-cols-3
+            lg:gap-8
+          "
+        >
           <PassionCard
-            title="Photography"
-            subtitle="A Matured Casual Photographer"
-            picpath="/images/photographer.png"
+            title="Photographer"
+            subtitle="Capturing perspectives, details, and stories through the lens."
+            picpath="/images/home/photographer.png"
           />
 
           <PassionCard
             title="Artist"
-            subtitle="Sometimes I go deep in the character"
-            picpath="/images/artist.png"
+            subtitle="Bringing concepts to life through art, skill, and imagination."
+            picpath="/images/home/artist.png"
           />
 
           <PassionCard
-            title="Photography"
-            subtitle="A Matured Casual Photographer"
-            picpath="/images/photographer.png"
+            title="Literature"
+            subtitle="Understanding people through stories and language"
+            picpath="/images/home/literature.png"
           />
         </div>
       </div>

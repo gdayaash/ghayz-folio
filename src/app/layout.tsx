@@ -3,7 +3,7 @@ import SmoothScroll from "@/components/ScrollSmooth/ScrollSmooth";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ghayz Portfolio",
+  title: "Dayaash Portfolio",
   description: "Developed By Dayaash",
 };
 

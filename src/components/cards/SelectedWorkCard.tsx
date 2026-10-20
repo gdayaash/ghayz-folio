@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 type SelectedWorkCardProps = {
@@ -21,8 +23,8 @@ export default function SelectedWorkCard({
         </p>
       </div>
 
-      <div className="y-folio__selected-work-card-image">
-        <Image src={image} alt={title} width={300} height={200} />
+      <div className="y-folio__selected-work-card-image flex flex-col items-center">
+        <Image src={image} alt={title} width={500} height={200} />
       </div>
     </article>
   );

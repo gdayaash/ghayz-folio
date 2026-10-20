@@ -1,31 +1,158 @@
+"use client";
+
 import PrimaryBtn from "../buttons/ButtonPrimary";
 import SecondaryBtn from "../buttons/ButtonSecondary";
-import SealCheckIcon from "../icons/TickIcon";
+import CopyIcon from "../icons/CopyIcon";
+import { WhatsappLogoIcon } from "@phosphor-icons/react";
+import Image from "next/image";
 
 function Hero() {
   return (
-    <section className="y-portfolio__hero-wrapper">
-      <div className="mx-auto w-full">
-        <div className="y-portfolio__hero-inner flex flex-col gap-3 items-center justify-center  h-dvh">
-          <div className="y-porfolio__heading-area flex flex-col gap-3 text-center">
-            <h1 className="y-portolio__hero-title font-bold flex flex-col gap-0 gradient-text text-[4.5rem] leading-20">
-              <span>Earn the Badge</span>
-              <span>Creators Trust Trust.</span>
+    <section className="y-portfolio__hero-wrapper relative overflow-hidden">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-0">
+        <div className="y-folio__left-hang-on absolute w-max left-0">
+          <Image
+            src="/images/home/banner-left.png"
+            alt="banner-left-hang"
+            width={140}
+            height={100}
+            className="w-full h-auto y-folio__left-hang-image"
+          />
+        </div>
+        <div
+          className="
+            y-portfolio__hero-inner
+            flex
+            min-h-dvh
+            flex-col
+            items-center
+            justify-center
+            gap-4
+            py-20
+            sm:gap-5
+            lg:gap-6
+          "
+        >
+          {/* ========================================
+              HEADING
+          ======================================== */}
+
+          <div
+            className="
+              y-porfolio__heading-area
+              flex
+              w-full
+              max-w-5xl
+              flex-col
+              gap-3
+              text-center
+              sm:gap-4
+            "
+          >
+            <h1
+              className="
+                y-portolio__hero-title
+                gradient-text
+                flex
+                flex-col
+                gap-0
+                px-2
+                text-[clamp(2.5rem,8vw,4.5rem)]
+                font-bold
+                leading-[1.05]
+                tracking-tight
+                sm:px-0
+              "
+            >
+              <span>Spot the gap.</span>
+              <span>Solve the Problem.</span>
             </h1>
-            <p className="y-portfolio__hero-title-desc text-[20px]">
-              Get verified and connect directly with{" "}
-              <b>140,000+ professional creators.</b>
+
+            <p
+              className="
+                y-portfolio__hero-title-desc
+                mx-auto
+                max-w-2xl
+                px-2
+                text-base
+                leading-relaxed
+                sm:px-0
+                sm:text-lg
+                lg:text-[20px]
+              "
+            >
+              Finding what the output misses, and{" "}
+              <b>shaping what the product needs.</b>
             </p>
           </div>
 
-          <div className="y-portfolio__hero-cta-area w-max my-3 flex gap-3 items-center">
-            <PrimaryBtn className="flex items-center gap-1 bg-black text-white text-[1rem] px-4 py-1.5 rounded-md">
-              <SealCheckIcon className="text-[#F8F9FA]" /> Contact
-            </PrimaryBtn>
-            <SecondaryBtn className="flex items-center gap-1 text-[1rem] px-4 py-1.5 rounded-md border border-solid border-[#03B197] font-semibold">
-              Story line <SealCheckIcon fill="currentcolor" />
+          {/* ========================================
+              CTA
+          ======================================== */}
+
+          <div
+            className="
+              y-portfolio__hero-cta-area
+              my-3
+              flex
+              w-full
+              items-center
+              justify-center
+              gap-2
+              px-2
+              sm:w-max
+              sm:gap-3
+              sm:px-0
+            "
+          >
+
+            <a
+              href="https://wa.me/8248914992"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-[32px] py-[10px] text-sm text-white transition-opacity hover:opacity-80 sm:px-6 sm:text-base w-[187px]"
+            >
+              <WhatsappLogoIcon
+                weight="regular"
+                aria-hidden="true"
+                className="size-5 shrink-0 sm:size-6"
+              />
+
+              <span className="whitespace-nowrap">Get in touch</span>
+            </a>
+
+            <SecondaryBtn
+              className="
+                flex
+                items-center
+                justify-center
+                gap-1
+                rounded-md
+                border
+                border-solid
+                border-[#03B197]
+                px-3
+                py-2
+                text-sm
+                font-semibold
+                sm:px-4
+                sm:py-1.5
+                sm:text-[1rem]
+              "
+            >
+              <CopyIcon fill="currentcolor" className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span>Explore</span>
             </SecondaryBtn>
           </div>
+        </div>
+        <div className="y-folio__right-hang-on absolute w-max right-0 bottom-20">
+          <Image
+            src="/images/home/banner-right.png"
+            alt="banner-right"
+            width={300}
+            height={100}
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </section>

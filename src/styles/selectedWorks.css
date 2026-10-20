@@ -14,41 +14,101 @@
 
 .y-folio__selected-works-scene {
   position: relative;
+  padding-bottom: 8rem;
 }
 
-.y-folio__selected-works-inner {
+/* =========================================================
+   GRID
+   Each row shares its center with the timeline pointer.
+========================================================= */
+
+.y-folio__selected-works-grid {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(60px, 0.2fr)
+    minmax(0, 1fr);
+  grid-template-rows: repeat(3, minmax(32rem, auto));
+  column-gap: 1.5rem;
+  row-gap: 1rem;
 }
 
-.y-folio__selected-works-scene-middle {
+/* =========================================================
+   CENTER TIMELINE
+   Scrolls naturally, then sticks at viewport center.
+========================================================= */
+
+.y-folio__selected-works-center {
+  grid-column: 2;
+  grid-row: 1 / -1;
   position: relative;
+  min-width: 0;
 }
 
-.y-folio__selected-works-middle-track {
-  position: relative;
-  min-height: 100%;
-}
-
-.y-folio__selected-works-middle-sticky {
+.y-folio__selected-works-center-sticky {
   position: sticky;
-  top: 0;
-
-  height: 100dvh;
-
+  top: calc(50dvh - 16rem);
+  height: 32rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.y-folio__selected-works-center-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 /* =========================================================
-   CENTER DASHED LINE
+   CARD SLOTS
+========================================================= */
+
+.y-folio__selected-work-card-slot {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.y-folio__selected-work-card-slot--left {
+  grid-column: 1;
+  justify-content: flex-end;
+}
+
+.y-folio__selected-work-card-slot--right {
+  grid-column: 3;
+  justify-content: flex-start;
+}
+
+.y-folio__selected-work-card-slot--row-1 {
+  grid-row: 1;
+}
+
+.y-folio__selected-work-card-slot--row-2 {
+  grid-row: 2;
+}
+
+.y-folio__selected-work-card-slot--row-3 {
+  grid-row: 3;
+}
+
+/* =========================================================
+   DASHED LINE
 ========================================================= */
 
 .y-folio__selected-works-line {
-  /*
-   * Dashed cyan line
-   */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 1;
+
   background-image: repeating-linear-gradient(
     to bottom,
     rgba(0, 255, 218, 0.9) 0,
@@ -57,10 +117,10 @@
     transparent 18px
   );
 
-  /*
-   * Fade the line into the background
-   * at both ends.
-   */
+  background-size: 100% 18px;
+  background-repeat: repeat-y;
+  background-position: 0 0;
+
   mask-image: linear-gradient(
     to bottom,
     transparent 0%,
@@ -86,15 +146,29 @@
     rgba(0, 0, 0, 0.12) 85%,
     transparent 100%
   );
-
-  z-index: 1;
 }
 
 /* =========================================================
-   POINTER
+   POINTER TRACK
+========================================================= */
+
+.y-folio__selected-works-pointer-track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+/* =========================================================
+   GLOWING POINTER
 ========================================================= */
 
 .y-folio__selected-works-pointer {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  border-radius: 50%;
   background: #00ffda;
 
   box-shadow:
@@ -102,46 +176,21 @@
     0 0 18px rgba(0, 255, 218, 0.95),
     0 0 35px rgba(0, 255, 218, 0.75),
     0 0 65px rgba(0, 255, 218, 0.4);
-
-  z-index: 10;
 }
 
 /* =========================================================
-   SELECTED WORK CARD
+   ACTIVE GLOWING SEGMENT
 ========================================================= */
 
-.y-folio__selected-work-card {
-  width: 478px;
-  max-width: 478px;
-
-  padding: 52px 43px 0;
-
-  border: 2px solid transparent;
-  border-radius: 60px;
-
-  background:
-    linear-gradient(rgba(15, 21, 20, 0.96), rgba(15, 21, 20, 0.96)) padding-box,
-    conic-gradient(
-        from 0deg,
-
-        rgba(167, 230, 210, 0.15) 0deg,
-        rgba(167, 230, 210, 0.15) 83deg,
-
-        #a7e6d2 135deg,
-        rgba(167, 230, 210, 0.15) 165deg,
-
-        rgba(167, 230, 210, 0.08) 180deg,
-        rgba(167, 230, 210, 0.08) 290deg,
-
-        #a7e6d2 315deg,
-        rgba(167, 230, 210, 0.15) 345deg,
-
-        rgba(167, 230, 210, 0.15) 360deg
-      )
-      border-box;
-}
-
 .y-folio__selected-works-active-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  width: 3px;
+  height: 7rem;
+  transform: translate(-50%, -50%);
+
   background: linear-gradient(
     to bottom,
     transparent 0%,
@@ -158,8 +207,32 @@
 }
 
 /* =========================================================
-   CARD TYPOGRAPHY
+   SELECTED WORK CARD
 ========================================================= */
+
+.y-folio__selected-work-card {
+  width: 100%;
+  max-width: 478px;
+  padding: 28px 28px 0;
+  border: 2px solid transparent;
+  border-radius: 40px;
+
+  background:
+    linear-gradient(rgba(15, 21, 20, 0.96), rgba(15, 21, 20, 0.96)) padding-box,
+    conic-gradient(
+        from 0deg,
+        rgba(167, 230, 210, 0.15) 0deg,
+        rgba(167, 230, 210, 0.15) 83deg,
+        #a7e6d2 135deg,
+        rgba(167, 230, 210, 0.15) 165deg,
+        rgba(167, 230, 210, 0.08) 180deg,
+        rgba(167, 230, 210, 0.08) 290deg,
+        #a7e6d2 315deg,
+        rgba(167, 230, 210, 0.15) 345deg,
+        rgba(167, 230, 210, 0.15) 360deg
+      )
+      border-box;
+}
 
 .y-folio__selected-work-card-title {
   font-size: 32px;
@@ -167,4 +240,89 @@
 
 .y-folio__selected-work-card-description {
   font-size: 24px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1023px) {
+  .y-folio__selected-works-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(40px, 0.15fr)
+      minmax(0, 1fr);
+    grid-template-rows: repeat(3, minmax(30rem, auto));
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  .y-folio__selected-works-center-sticky {
+    top: calc(50dvh - 15rem);
+    height: 30rem;
+  }
+
+  .y-folio__selected-work-card {
+    padding: 22px 18px 0;
+    border-radius: 32px;
+  }
+
+  .y-folio__selected-work-card-title {
+    font-size: 26px;
+  }
+
+  .y-folio__selected-work-card-description {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .y-folio__selected-works-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    row-gap: 1.25rem;
+  }
+
+  .y-folio__selected-works-center {
+    display: none;
+  }
+
+  .y-folio__selected-work-card-slot,
+  .y-folio__selected-work-card-slot--left,
+  .y-folio__selected-work-card-slot--right {
+    grid-column: 1;
+    grid-row: auto;
+    justify-content: center;
+  }
+
+  .y-folio__selected-work-card-slot--row-1 {
+    grid-row: 1;
+  }
+
+  .y-folio__selected-work-card-slot--row-2 {
+    grid-row: 2;
+  }
+
+  .y-folio__selected-work-card-slot--row-3 {
+    grid-row: 3;
+  }
+
+  .y-folio__selected-work-card {
+    width: 100%;
+    max-width: 478px;
+    padding: 18px 16px 0;
+    border-radius: 26px;
+  }
+
+  .y-folio__selected-work-card-title {
+    font-size: 24px;
+  }
+
+  .y-folio__selected-work-card-description {
+    font-size: 16px;
+  }
 }

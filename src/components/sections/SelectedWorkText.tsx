@@ -41,7 +41,7 @@ function SelectedWorkText() {
             ref={titleRef}
             className="y-folio__selected-works-title text-center relative flex flex-col"
           >
-            <span className="y-folio__selected-works-title-text-span-one">
+            <span className="y-folio__selected-works-title-text-span-on">
               <SelectedTextSVG />
             </span>
             <span className="y-folio__selected-works-title-text-span-second text-[#E0FFFB] text-[120px] font-bold z-3">

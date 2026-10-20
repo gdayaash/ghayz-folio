@@ -11,6 +11,7 @@ const works = [
     description:
       "Building a Network Before the App",
       image: "/images/case-study/waitlist-bg.png",
+    link: "/case-study/waitlist"  
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const works = [
     description:
       "Turning Existing Profiles into Active Creators",
       image: "/images/case-study/creator-bg.png",
+      link: "/case-study/creator"  
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const works = [
     description:
       "Making the Product Its Own Salesperson",
        image: "/images/case-study/agency-bg.png",
+      link: "/case-study/agency"  
   },
     {
     id: 4,
@@ -32,6 +35,7 @@ const works = [
     description:
       "Designed to Make an Impression",
        image: "/images/case-study/agency-bg.png",
+       link: "/case-study/website"  
 
   },
     {
@@ -40,6 +44,7 @@ const works = [
     description:
       "Making Complex AI Feel Simple.",
        image: "/images/case-study/agency-bg.png",
+       link: "/case-study/nexusAi"  
 
   },
   {
@@ -48,6 +53,7 @@ const works = [
     description:
       "Making Every Feature a Story",
        image: "/images/case-study/agency-bg.png",
+       link: "/case-study/marketing-visuals"  
 
   },
 ];
@@ -252,6 +258,7 @@ export default function SelectedWorksScene() {
               title={works[0].title}
               description={works[0].description}
               image={works[0].image}
+              link={works[0].link}
             />
           </div>
 
@@ -267,6 +274,8 @@ export default function SelectedWorksScene() {
               title={works[1].title}
               description={works[1].description}
               image={works[1].image}
+              link={works[1].link}
+
             />
           </div>
 
@@ -282,6 +291,8 @@ export default function SelectedWorksScene() {
               title={works[2].title}
               description={works[2].description}
               image={works[2].image}
+              link={works[2].link}
+
             />
           </div>
 
@@ -297,6 +308,8 @@ export default function SelectedWorksScene() {
               title={works[3].title}
               description={works[3].description}
               image={works[3].image}
+              link={works[3].link}
+
             />
           </div>
 
@@ -312,6 +325,8 @@ export default function SelectedWorksScene() {
               title={works[4].title}
               description={works[4].description}
               image={works[4].image}
+              link={works[4].link}
+
             />
           </div>
 
@@ -327,6 +342,8 @@ export default function SelectedWorksScene() {
               title={works[5].title}
               description={works[5].description}
               image={works[5].image}
+              link={works[5].link}
+
             />
           </div>
           

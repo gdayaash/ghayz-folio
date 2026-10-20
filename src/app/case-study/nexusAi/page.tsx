@@ -6,7 +6,7 @@ import CaseStudyNav from "@/components/case-study/CaseStudyNav";
 import DesignIframe from "@/components/case-study/DesignIframe";
 import Header from "@/components/header/Header";
 import { caseStudies } from "@/data/caseStudies";
-import { QuoteIcon } from "@phosphor-icons/react";
+import { QuotesIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 
 export default function NexusAi() {

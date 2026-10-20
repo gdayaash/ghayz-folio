@@ -442,118 +442,9 @@ export const caseStudies = {
     },
   },
   marketingVisuals: {
-    title: "Making Every Feature a Story Worth Seeing",
-    subTitle:
-      "Transforming Qoruz’s advanced AI capabilities into an intuitive visual story that communicates what the technology does and why it matters.",
-
-    heroImage: {
-      src: "/images/case-study/marketing-visuals.png",
-      alt: "Making Complex AI Feel Simple",
-    },
-
-    theChallenge: {
-      title: "The Challenge",
-      description: [
-        "HashFame offers multiple features for creators and brands, but communicating their value across different marketing channels requires more than attractive visuals.",
-        "The challenge was to make every communication instantly understandable, visually engaging, and recognizable as HashFame.",
-      ],
-    },
-    theApproach: {
-      title: "One Visual. One Message. One Purpose.",
-      description: [
-        "Rather than explaining everything at once, I focused on communicating one meaningful idea at a time.",
-        "Using relatable problems, contrasting scenarios, product-led visuals, and concise messaging, each design tells a story that audiences can understand without additional explanation.",
-      ],
-    },
-    theExecution: {
-      title: "The Execution",
-      description: [
-        {
-          title: "Social Media & Campaigns",
-          description:
-            "Making product updates and features feel relevant through relatable situations, clear messaging, and engaging visual narratives.",
-        },
-        {
-          title: "App Store Screens",
-          description:
-            "Creating a connected story where every screen introduces a benefit, building a complete understanding of HashFame through a simple visual journey.",
-        },
-        {
-          title: "Advertisements & Marketing Creatives",
-          description:
-            "Combining strong headlines, product interfaces, and purposeful compositions to communicate value at a glance.",
-        },
-      ],
-    },
-    theDesignThinking: {
-      title: "Show the Value. Not Just the Feature.",
-      description: [
-        "A feature tells users what a product can do. A story helps them understand why they should care.",
-        "From illustrating the frustration of traditional influencer marketing to showing how creators receive brand opportunities, every visual was designed to connect functionality with a real-world benefit.",
-      ],
-    },
-    designs: {
-      description: "Hashfame",
-    },
-  },
-  nexusAi: {
-  title: "Making Complex AI Feel Simple",
-  subTitle:
-    "Transforming Qoruz’s advanced AI capabilities into an intuitive visual story that communicates what the technology does and why it matters.",
-
-  heroImage: {
-    src: "/images/case-study/complex-ai.png",
-    alt: "Qoruz Nexus AI visual storytelling presentation",
-  },
-
-  theChallenge: {
-    title: "The Challenge",
-    subtitle: "Powerful Technology. Complex Communication.",
-    description: [
-      "Qoruz AI brings together creator discovery, audience intelligence, trend analysis, and campaign insights.",
-      "While these capabilities are powerful, communicating their value to marketers without overwhelming them with technical explanations was the challenge.",
-      "The goal was to make AI feel approachable, practical, and relevant to real marketing decisions.",
-    ],
-  },
-
-  theApproach: {
-    title: "The Approach",
-    subtitle: "Show the Intelligence, Not Just the Interface.",
-    description: [
-      "Rather than presenting AI as a collection of features, I focused on understanding how each capability works within the product and translating it into a meaningful user experience.",
-      "Every visual connects a marketer's intent with the AI's process and the outcome it delivers, making complex functionality easier to understand at a glance.",
-    ],
-  },
-
-  visualStorytelling: {
-    title: "Visual Storytelling",
-    subtitle: "Making the Invisible, Visible.",
-    description: [
-      "The design uses product interfaces, connected visual elements, and contextual interactions to illustrate how Qoruz AI interprets requirements, analyzes information, and delivers relevant recommendations.",
-      "Instead of explaining the technology behind every feature, the visuals demonstrate its value through familiar marketing scenarios.",
-    ],
-  },
-
-  theImpact: {
-    title: "The Impact",
-    subtitle: "AI That Makes Sense Before You Try It.",
-    description: [
-      "The result is a product-led digital experience that makes Qoruz AI's capabilities easier to discover, understand, and remember.",
-      "Beyond introducing features, the design positions Nexus AI as an intelligent partner that helps marketers move from questions to confident decisions.",
-    ],
-    quote:
-      "Complex technology doesn’t need complex communication. The right visual story makes its value clear.",
-  },
-
-  designs: {
-    description:
-      "The Nexus AI presentation communicates complex AI capabilities through a clear visual narrative, connecting the technology's underlying intelligence to practical marketing outcomes.",
-  },
-},
-marketingVisuals: {
   title: "Making Every Feature a Story Worth Seeing",
   subTitle:
-    "Transforming Qoruz’s advanced AI capabilities into an intuitive visual story that communicates what the technology does and why it matters.",
+    "Transforming HashFame's product features into clear, engaging visual stories for creators and brands.",
 
   heroImage: {
     src: "/images/case-study/marketing-visuals.png",
@@ -609,9 +500,65 @@ marketingVisuals: {
   },
 
   designs: {
-    description: "HashFame.",
+    description:
+      "A collection of HashFame's marketing creatives, app store screens, and product-led visual storytelling.",
   },
 },
+  nexusAi: {
+  title: "Making Complex AI Feel Simple",
+  subTitle:
+    "Transforming Qoruz’s advanced AI capabilities into an intuitive visual story that communicates what the technology does and why it matters.",
+
+  heroImage: {
+    src: "/images/case-study/complex-ai.png",
+    alt: "Qoruz Nexus AI visual storytelling presentation",
+  },
+
+  theChallenge: {
+    title: "The Challenge",
+    subtitle: "Powerful Technology. Complex Communication.",
+    description: [
+      "Qoruz AI brings together creator discovery, audience intelligence, trend analysis, and campaign insights.",
+      "While these capabilities are powerful, communicating their value to marketers without overwhelming them with technical explanations was the challenge.",
+      "The goal was to make AI feel approachable, practical, and relevant to real marketing decisions.",
+    ],
+  },
+
+  theApproach: {
+    title: "The Approach",
+    subtitle: "Show the Intelligence, Not Just the Interface.",
+    description: [
+      "Rather than presenting AI as a collection of features, I focused on understanding how each capability works within the product and translating it into a meaningful user experience.",
+      "Every visual connects a marketer's intent with the AI's process and the outcome it delivers, making complex functionality easier to understand at a glance.",
+    ],
+  },
+
+  visualStorytelling: {
+    title: "Visual Storytelling",
+    subtitle: "Making the Invisible, Visible.",
+    description: [
+      "The design uses product interfaces, connected visual elements, and contextual interactions to illustrate how Qoruz AI interprets requirements, analyzes information, and delivers relevant recommendations.",
+      "Instead of explaining the technology behind every feature, the visuals demonstrate its value through familiar marketing scenarios.",
+    ],
+  },
+
+  theImpact: {
+    title: "The Impact",
+    subtitle: "AI That Makes Sense Before You Try It.",
+    description: [
+      "The result is a product-led digital experience that makes Qoruz AI's capabilities easier to discover, understand, and remember.",
+      "Beyond introducing features, the design positions Nexus AI as an intelligent partner that helps marketers move from questions to confident decisions.",
+    ],
+    quote:
+      "Complex technology doesn’t need complex communication. The right visual story makes its value clear.",
+  },
+
+  designs: {
+    description:
+      "The Nexus AI presentation communicates complex AI capabilities through a clear visual narrative, connecting the technology's underlying intelligence to practical marketing outcomes.",
+  },
+},
+
 
 
   

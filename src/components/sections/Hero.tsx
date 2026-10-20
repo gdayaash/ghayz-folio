@@ -10,8 +10,8 @@ import Image from "next/image";
 function Hero() {
   return (
     <section className="y-portfolio__hero-wrapper relative overflow-hidden">
-      <div className="mx-auto w-full px-4 sm:px-6 lg:px-0">
-        <div className="y-folio__left-hang-on absolute w-max left-0">
+      <div className="mx-auto w-full px-1 sm:px-6 lg:px-0">
+        <div className="y-folio__left-hang-on absolute w-max left-0 hidden lg:block">
           <Image
             src="/images/home/banner-left.png"
             alt="banner-left-hang"
@@ -24,12 +24,14 @@ function Hero() {
           className="
             y-portfolio__hero-inner
             flex
-            min-h-dvh
+            h-auto
+            sm:min-h-dvh
             flex-col
             items-center
             justify-center
             gap-4
-            py-20
+            py-8
+            sm:py-20
             sm:gap-5
             lg:gap-6
           "
@@ -56,9 +58,11 @@ function Hero() {
                 gradient-text
                 flex
                 flex-col
-                gap-0
+                gap-2
+                sm:gap-0
                 px-2
-                text-[clamp(2.5rem,8vw,4.5rem)]
+                text-[28px]
+                sm:text-[clamp(2.5rem,8vw,4.5rem)]
                 font-bold
                 leading-[1.05]
                 tracking-tight
@@ -111,7 +115,8 @@ function Hero() {
               href="https://wa.me/8248914992"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-[32px] py-[10px] text-sm text-white transition-opacity hover:opacity-80 sm:text-base w-[187px]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-2 py-[10px] sm:px-3 text-sm text-white transition-opacity hover:opacity-80 sm:px-2 sm:py-[10px] sm:text-base md:w-[187px]"
+
             >
               <WhatsappLogoIcon
                 weight="regular"
@@ -121,52 +126,10 @@ function Hero() {
 
               <span className="whitespace-nowrap">Get in touch</span>
             </a>
-{/* 
-            <SecondaryBtn
-              className="
-                flex
-                items-center
-                justify-center
-                gap-1
-                rounded-md
-                border
-                border-solid
-                border-[#03B197]
-                px-3
-                py-2
-                text-sm
-                font-semibold
-                sm:px-4
-                sm:py-1.5
-                sm:text-[1rem]
-              "
-            >
-              <CopyIcon fill="currentcolor" className="h-4 w-4 sm:h-5 sm:w-5" />
-              <span>Explore</span>
-            </SecondaryBtn> */}
 
             <a
               href="#works"
-              className="
-                inline-flex
-                shrink-0
-                items-center
-                justify-center
-                gap-3
-                rounded-[12px]
-                border-2
-                border-solid
-                border-[#03B197]
-                bg-transparent
-                px-[32px]
-                py-[10px]
-                text-sm
-                font-normal
-                text-black
-                transition-colors
-                hover:bg-[#03B197]/10
-                sm:text-base
-              "
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] border-2 border-solid border-[#03B197] bg-transparent px-2 py-[10px] text-sm font-normal text-black transition-colors hover:bg-[#03B197]/10 sm:gap-3 sm:px-3 sm:text-base md:px-[32px]"
             >
               <Files
                 weight="regular"
@@ -177,7 +140,7 @@ function Hero() {
             </a>
           </div>
         </div>
-        <div className="y-folio__right-hang-on absolute w-max right-0 bottom-20">
+        <div className="y-folio__right-hang-on absolute w-max right-0 bottom-20 hidden lg:block">
           <Image
             src="/images/home/banner-right.png"
             alt="banner-right"

@@ -194,7 +194,7 @@ export default function TimelineSection() {
                 grid
                 gap-y-6
                 sm:gap-y-8
-                lg:gap-y-10
+                lg:gap-y-2
               "
             >
               {timelineCards.map((e, index) => (

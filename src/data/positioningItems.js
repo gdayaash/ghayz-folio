@@ -1,22 +1,22 @@
 export const positioningItems = [
   {
     title: "Positioning",
-    description: "We define how your brand should be positioned.",
+    description: "Shaping how a product is understood and where it stands.",
   },
   {
     title: "Psychology",
-    description: "We understand the audience and their behavior.",
+    description: "Designing around how people perceive, decide, and behave.",
   },
   {
     title: "Acquisition",
-    description: "We onboard and understand your brief.",
+    description: "Creating clearer paths for discovery, entry, and adoption.",
   },
   {
     title: "Branding",
-    description: "We build a recognizable and consistent brand.",
+    description: "Shaping how a product feels, communicates, and stays remembered.",
   },
   {
     title: "Strategist",
-    description: "We create a strategy that connects everything.",
+    description: "Connecting user needs, business goals, and what gets built.",
   },
 ];

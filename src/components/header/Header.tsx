@@ -71,7 +71,7 @@ export default function Header() {
               href="https://wa.me/8248914992"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-[32px] py-[10px] text-sm text-white transition-opacity hover:opacity-80 sm:px-6 sm:text-base md:w-[187px]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-[32px] py-[10px] text-sm text-white transition-opacity hover:opacity-80 sm:text-base md:w-[187px]"
             >
               <WhatsappLogoIcon
                 weight="regular"

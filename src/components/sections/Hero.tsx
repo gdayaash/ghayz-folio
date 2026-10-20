@@ -4,6 +4,7 @@ import PrimaryBtn from "../buttons/ButtonPrimary";
 import SecondaryBtn from "../buttons/ButtonSecondary";
 import CopyIcon from "../icons/CopyIcon";
 import { WhatsappLogoIcon } from "@phosphor-icons/react";
+import { Files } from "@phosphor-icons/react";
 import Image from "next/image";
 
 function Hero() {
@@ -110,7 +111,7 @@ function Hero() {
               href="https://wa.me/8248914992"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-[32px] py-[10px] text-sm text-white transition-opacity hover:opacity-80 sm:px-6 sm:text-base w-[187px]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-[32px] py-[10px] text-sm text-white transition-opacity hover:opacity-80 sm:text-base w-[187px]"
             >
               <WhatsappLogoIcon
                 weight="regular"
@@ -120,7 +121,7 @@ function Hero() {
 
               <span className="whitespace-nowrap">Get in touch</span>
             </a>
-
+{/* 
             <SecondaryBtn
               className="
                 flex
@@ -142,7 +143,38 @@ function Hero() {
             >
               <CopyIcon fill="currentcolor" className="h-4 w-4 sm:h-5 sm:w-5" />
               <span>Explore</span>
-            </SecondaryBtn>
+            </SecondaryBtn> */}
+
+            <a
+              href="#works"
+              className="
+                inline-flex
+                shrink-0
+                items-center
+                justify-center
+                gap-3
+                rounded-[12px]
+                border-2
+                border-solid
+                border-[#03B197]
+                bg-transparent
+                px-[32px]
+                py-[10px]
+                text-sm
+                font-normal
+                text-black
+                transition-colors
+                hover:bg-[#03B197]/10
+                sm:text-base
+              "
+            >
+              <Files
+                weight="regular"
+                aria-hidden="true"
+                className="size-5 shrink-0 sm:size-6"
+              />
+              <span className="whitespace-nowrap">Explore</span>
+            </a>
           </div>
         </div>
         <div className="y-folio__right-hang-on absolute w-max right-0 bottom-20">

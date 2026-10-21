@@ -153,20 +153,12 @@ export default function PassionSection() {
         {/* Cards */}
         <div
           className="
-            y-folio__passion-cards-wrapper
-            mt-10
-            grid
-            grid-cols-1
-            gap-6
-            sm:mt-12
-            sm:gap-[30px]
-            md:grid-cols-2
-            lg:mt-16
-            lg:grid-cols-3
-            lg:gap-8
-            w-max
-            mx-auto
-          "
+                    y-folio__passion-cards-wrapper
+                    mx-auto mt-10 grid w-full
+                    grid-cols-1 justify-items-center gap-6
+                    sm:mt-12 sm:gap-[30px]
+                    md:grid-cols-2
+                    lg:mt-16 lg:grid-cols-3 lg:gap-8 sm:w-max"
         >
           <PassionCard
             title="Photographer"

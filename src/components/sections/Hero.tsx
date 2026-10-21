@@ -58,8 +58,7 @@ function Hero() {
                 gradient-text
                 flex
                 flex-col
-                gap-2
-                sm:gap-0
+                gap-[12px]
                 px-2
                 text-[28px]
                 sm:text-[clamp(2.5rem,8vw,4.5rem)]
@@ -69,8 +68,8 @@ function Hero() {
                 sm:px-0
               "
             >
-              <span>Spot the gap.</span>
-              <span>Solve the Problem.</span>
+              <span className="tracking-[2px]">Spot the gap.</span>
+              <span className="tracking-[2px]">Solve the Problem.</span>
             </h1>
 
             <p
@@ -80,14 +79,16 @@ function Hero() {
                 max-w-2xl
                 px-2
                 text-base
-                leading-relaxed
                 sm:px-0
                 sm:text-lg
-                lg:text-[20px]
+                md:text-[16px]
+                opacity-70
+                font-light
+                leading-[24px]
               "
             >
               Finding what the output misses, and{" "}
-              <b>shaping what the product needs.</b>
+              shaping what the product needs.
             </p>
           </div>
 
@@ -129,7 +130,7 @@ function Hero() {
 
             <a
               href="/works"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] border-2 border-solid border-[#03B197] bg-transparent px-2 py-[10px] text-sm font-normal text-black transition-colors hover:bg-[#03B197]/10 sm:gap-3 sm:px-3 sm:text-base md:px-[32px]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] border-[1.5px] border-solid border-[#03B197] bg-transparent px-2 py-[9px] text-sm font-normal text-black transition-colors hover:bg-[#03B197]/10 sm:gap-3 sm:px-3 sm:text-base md:px-[32px]"
             >
               <Files
                 weight="regular"
@@ -138,6 +139,7 @@ function Hero() {
               />
               <span className="whitespace-nowrap">Explore</span>
             </a>
+
           </div>
         </div>
         <div className="y-folio__right-hang-on absolute w-max right-0 bottom-20 hidden lg:block">

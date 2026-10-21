@@ -12,13 +12,13 @@ export default function PassionCard({
   picpath,
 }: PassionCardProps) {
   return (
-    <article className="y-folio__passion-card overflow-hidden rounded-[11px] border border-solid border-[#CED4DA]">
-      <div className="y-folio__passion-card-title-area flex flex-col gap-1 bg-[#F0F2F4] px-5 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6">
-        <h3 className="y-folio__passion-card-title text-[1.25rem] leading-tight sm:text-[1.5rem] font-bold">
+    <article className="y-folio__passion-card overflow-hidden rounded-[11px] border border-solid border-[#CED4DA] w-[390px]">
+      <div className="y-folio__passion-card-title-area flex flex-col gap-1 bg-[#F0F2F4] px-5 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-[32px]">
+        <h3 className="y-folio__passion-card-title text-[24px] leading-tight sm:text-[1.5rem] font-semibold">
           {title}
         </h3>
 
-        <p className="y-folio__passion-card-subtitle text-[0.8rem] leading-relaxed sm:text-[0.85rem] lg:text-[1.225rem]">
+        <p className="y-folio__passion-card-subtitle text-[0.8rem] leading-relaxed sm:text-[0.85rem] lg:text-[1.225rem] font-light">
           {subtitle}
         </p>
       </div>

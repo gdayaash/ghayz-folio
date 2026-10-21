@@ -1,3 +1,6 @@
+"use client"
+
+import { WhatsappLogoIcon } from "@phosphor-icons/react";
 import PrimaryBtn from "../buttons/ButtonPrimary";
 import SealCheckIcon from "../icons/TickIcon";
 
@@ -36,6 +39,7 @@ function ContactUsCta() {
               font-semibold
               leading-tight
               text-white
+              tracking-[2.5px]
             "
           >
             Contact
@@ -52,6 +56,8 @@ function ContactUsCta() {
               opacity-80
               sm:text-lg
               lg:text-[24px]
+              font-light
+              opacity-80
             "
           >
             Have a product problem worth solving? <br />
@@ -59,27 +65,21 @@ function ContactUsCta() {
           </p>
 
           <div className="mt-4 sm:mt-5 lg:mt-6">
-            <PrimaryBtn
-              className="
-                flex
-                items-center
-                gap-1.5
-                rounded-md
-                bg-black
-                px-3
-                py-2
-                text-sm
-                text-white
-                sm:px-4
-                sm:text-[0.9rem]
-                lg:px-6
-                lg:py-2
-                lg:text-[1rem]
-              "
+            <a
+              href="https://wa.me/8248914992"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] bg-black px-2 py-[10px] sm:px-3 text-sm text-white transition-opacity hover:opacity-80 sm:px-2 sm:py-[10px] sm:text-base md:w-[187px]"
+
             >
-              <SealCheckIcon className="h-4 w-4 text-[#F8F9FA] sm:h-5 sm:w-5" />
-              <span>Get in touch</span>
-            </PrimaryBtn>
+              <WhatsappLogoIcon
+                weight="regular"
+                aria-hidden="true"
+                className="size-5 shrink-0 sm:size-6"
+              />
+
+              <span className="whitespace-nowrap">Get in touch</span>
+            </a>
           </div>
         </div>
       </div>

@@ -159,11 +159,13 @@ export default function PassionSection() {
             grid-cols-1
             gap-6
             sm:mt-12
-            sm:gap-7
+            sm:gap-[30px]
             md:grid-cols-2
             lg:mt-16
             lg:grid-cols-3
             lg:gap-8
+            w-max
+            mx-auto
           "
         >
           <PassionCard

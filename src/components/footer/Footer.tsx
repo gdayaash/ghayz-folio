@@ -62,7 +62,7 @@ export default function Footer({
             className={`y-folio__social-icons flex items-center gap-x-2 ${textColorClass}`}
           >
             <a href="https://www.instagram.com/low_lightings?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==" target="_blank">
-              <InstagramLogoIcon size={26} />
+              <InstagramLogoIcon size={32} />
             </a>
 
             <a
@@ -70,14 +70,14 @@ export default function Footer({
               target="_blank"
               aria-label="visit-linkedIn-profile"
             >
-              <LinkedinLogoIcon size={26} />
+              <LinkedinLogoIcon size={32} />
             </a>
 
             <a
               href="mailto:ghaytherighayz@gmail.com"
               aria-label="Send an email"
             >
-              <EnvelopeSimpleIcon size={28} />
+              <EnvelopeSimpleIcon size={36} />
             </a>
           </div>
         </div>

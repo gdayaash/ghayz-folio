@@ -352,7 +352,7 @@ export default function PositioningSection() {
               gap-10
               sm:gap-12
               md:gap-14
-              lg:gap-16
+              lg:gap-22
             "
           >
             {positioningItems.map((item) => (
@@ -431,7 +431,7 @@ export default function PositioningSection() {
                     "
                   />
 
-                  <span className="text-[24px]">
+                  <span className="text-[20px] font-light opacity-[50%]">
                     {item.description}
                   </span>
                 </div>

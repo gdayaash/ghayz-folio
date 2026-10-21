@@ -19,12 +19,14 @@ export default function TimelineCard({
         sm:py-7
         lg:px-8
         lg:py-8
+        h-auto
+        sm:h-[186px]
       "
     >
       <h3
         className="
           y-folio__timeline-card-title
-          text-[clamp(1.5rem,3vw,2rem)]
+          text-[24px] md:text-[28px]
           font-medium
           leading-tight
           tracking-normal
@@ -37,10 +39,8 @@ export default function TimelineCard({
       <p
         className="
           y-folio__timeline-card-description
-          mt-2
           text-[0.875rem]
           font-extralight
-          leading-relaxed
           sm:text-[0.9rem]
           lg:text-[0.95rem]
         "

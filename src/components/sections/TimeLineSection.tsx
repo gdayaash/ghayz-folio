@@ -370,7 +370,7 @@ export default function TimelineSection() {
     const handleMouseEnter = () => {
       hoverDelay?.kill();
 
-      hoverDelay = gsap.delayedCall(0.6, () => {
+      hoverDelay = gsap.delayedCall(1.5, () => {
         showTimeline.play();
       });
     };
@@ -521,6 +521,7 @@ export default function TimelineSection() {
           </div>
         </div>
       </div>
+      <div className="y-folio__timeline-section-card-gradient-strip py-20 absolute w-full"></div>
     </section>
   );
 }

@@ -400,8 +400,9 @@ export default function TimelineSection() {
         relative
         mx-auto
         h-auto
-        w-[calc(100%-2rem)]
-        sm:w-[90%]
+        md:w-[calc(100%-2rem)]
+        sm:w-full
+        md:w-[90%]
         lg:h-[45rem]
         lg:w-[80%]
         xl:w-[70%]

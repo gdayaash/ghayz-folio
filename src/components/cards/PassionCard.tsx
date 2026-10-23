@@ -14,8 +14,10 @@ export default function PassionCard({
   return (
     <article className="y-folio__passion-card w-full max-w-[390px] overflow-hidden rounded-[11px] border border-solid border-[#CED4DA]">
       <div className="y-folio__passion-card-title-area flex flex-col gap-1 bg-[#F0F2F4] px-5 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-[32px]">
-        <h3 className="y-folio__passion-card-title text-[24px] leading-tight sm:text-[1.5rem] font-semibold">
-          {title}
+        <h3 className="y-folio__passion-card-title text-[24px] leading-tight sm:text-[1.5rem] font-light">
+          <b>
+            {title}
+          </b>
         </h3>
 
         <p className="y-folio__passion-card-subtitle text-[0.8rem] leading-relaxed sm:text-[0.85rem] lg:text-[1.225rem] font-light">

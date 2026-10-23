@@ -292,6 +292,16 @@
     margin-bottom: 100px;
   }
 
+  .timeline-section-wrapper{
+      background: linear-gradient(
+    358deg,
+    #0b855e 45%,
+    #086145 64%,
+    #041d16 86%,
+    #001110 100%
+  );
+  }
+
   .timeline-section-gradient-effect {
     padding: 32px 20px;
   }

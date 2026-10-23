@@ -30,7 +30,7 @@ function Hero() {
             items-center
             justify-center
             gap-4
-            py-8
+            py-38
             sm:py-20
             sm:gap-5
             lg:gap-6
@@ -72,24 +72,12 @@ function Hero() {
               <span className="tracking-[2px]">Solve the Problem.</span>
             </h1>
 
-            <p
-              className="
-                y-portfolio__hero-title-desc
-                mx-auto
-                max-w-2xl
-                px-2
-                text-base
-                sm:px-0
-                sm:text-lg
-                md:text-[16px]
-                opacity-70
-                font-light
-                leading-[24px]
-              "
-            >
-              Finding what the output misses, and{" "}
-              shaping what the product needs.
+            <p className="y-portfolio__hero-title-desc mx-auto px-2 text-center font-light leading-relaxed sm:text-[16px] opacity-70">
+              Finding what the output misses, and
+              <br className="sm:hidden" />
+              {" "}shaping what the product needs.
             </p>
+            
           </div>
 
           {/* ========================================

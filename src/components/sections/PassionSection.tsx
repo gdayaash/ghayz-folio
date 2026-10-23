@@ -140,13 +140,15 @@ export default function PassionSection() {
   return (
     <section
       id="passion"
-      className="y-folio__passion-wrapper px-4 py-16 sm:px-6 sm:py-20 lg:px-0 lg:py-24"
+      className="y-folio__passion-wrapper px-4 py-2 sm:px-6 sm:py-20 lg:px-0 lg:py-24"
     >
       <div className="container mx-auto">
         {/* Heading */}
         <div className="y-folio__passion-heading-area">
-          <h2 className="y-folio__passion-section-title text-center text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight">
-            Beyond the Interface
+          <h2 className="y-folio__passion-section-title text-center text-[clamp(1.75rem,5vw,3rem)] font-light leading-tight">
+            <b>
+              Beyond the Interface
+            </b>
           </h2>
         </div>
 

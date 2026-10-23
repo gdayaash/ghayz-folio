@@ -15,8 +15,8 @@ export default function TimelineCard({
         w-full
         px-5
         py-6
-        sm:px-6
-        sm:py-7
+        sm:px-[20px]
+        sm:py-[40px]
         lg:px-8
         lg:py-8
         h-auto

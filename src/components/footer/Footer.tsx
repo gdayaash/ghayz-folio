@@ -50,7 +50,7 @@ export default function Footer({
 
           {/* Description */}
           <p
-            className={`y-folio__footer-desc w-full text-[20px] md:w-1/3 ${textColorClass}`}
+            className={`y-folio__footer-desc w-full text-[16px] md:w-1/4 sm:w-full ${textColorClass} font-light`}
           >
             Product designer working across product strategy, experience, and
             growth turning unclear problems into products people understand and

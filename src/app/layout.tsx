@@ -3,8 +3,8 @@ import SmoothScroll from "@/components/ScrollSmooth/ScrollSmooth";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dayaash Portfolio",
-  description: "Developed By Dayaash",
+  title: "Ghaytheri S",
+  description: "Creative designer crafting meaningful digital experiences.",
 };
 
 export default function RootLayout({

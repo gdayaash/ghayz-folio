@@ -4,8 +4,8 @@
 
 .y-folio__selected-works-title-text-span-second {
   font-family: "Plus Jakarta Sans", sans-serif;
-  margin-top: -62px;
-  margin-left: 14px;
+  margin-top: -30px;
+  margin-left: 16px;
 }
 
 /* =========================================================
@@ -223,49 +223,12 @@
 ========================================================= */
 /* 
 .y-folio__selected-work-card {
-  width: 100%;
-  max-width: 478px;
-  padding: 28px 28px 0;
-  border: 2px solid transparent;
-  border-radius: 40px;
-
-  background:
-    linear-gradient(rgba(15, 21, 20, 0.96), rgba(15, 21, 20, 0.96)) padding-box,
-    conic-gradient(
-        from 0deg,
-        rgba(167, 230, 210, 0.15) 0deg,
-        rgba(167, 230, 210, 0.15) 83deg,
-        #a7e6d2 135deg,
-        rgba(167, 230, 210, 0.15) 165deg,
-        rgba(167, 230, 210, 0.08) 180deg,
-        rgba(167, 230, 210, 0.08) 290deg,
-        #a7e6d2 315deg,
-        rgba(167, 230, 210, 0.15) 345deg,
-        rgba(167, 230, 210, 0.15) 360deg
-      )
-      border-box;
-}
-
-.y-folio__selected-work-card-title {
-  font-size: 32px;
-}
-
-.y-folio__selected-work-card-description {
-  font-size: 24px;
-} */
-
-
-/* =========================================================
-   SELECTED WORK CARD
-========================================================= */
-
-.y-folio__selected-work-card {
   position: relative;
   isolation: isolate;
 
   width: 100%;
   max-width: 478px;
-  padding: 28px 28px 0;
+  padding: 40px 36px 0;
 
   border: 2px solid transparent;
   border-radius: 40px;
@@ -285,6 +248,104 @@
       rgba(167, 230, 210, 0.65) 88%,
       #a7e6d2 100%
     ) border-box;
+
+     transition: border-color 0.5s ease;
+}
+
+.y-folio__selected-work-card-title {
+  font-size: 32px;
+}
+
+.y-folio__selected-work-card-description {
+  font-size: 24px;
+}
+
+.y-folio__selected-work-card:hover {
+  border-color: transparent;
+  background:
+    linear-gradient(
+      rgba(25, 27, 27, 0.98),
+      rgba(25, 27, 27, 0.98)
+    ) padding-box,
+    linear-gradient(
+      135deg,
+      #A7E6D2 0%,
+      rgba(255, 255, 255, 0.95) 35%,
+      #FFFFFF 50%,
+      rgba(99, 113, 109, 0.9) 80%,
+      #63716D 100%
+    ) border-box;
+} */
+
+
+/* =========================================================
+   SELECTED WORK CARD
+========================================================= */
+
+.y-folio__selected-work-card {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  max-width: 478px;
+  padding: 40px 36px 0;
+
+  border: 2px solid transparent;
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      rgba(15, 21, 20, 0.98),
+      rgba(15, 21, 20, 0.98)
+    ) padding-box,
+    linear-gradient(
+      135deg,
+      #a7e6d2 0%,
+      rgba(167, 230, 210, 0.7) 3%,
+      rgba(167, 230, 210, 0.12) 32%,
+      rgba(167, 230, 210, 0.06) 45%,
+      rgba(167, 230, 210, 0.18) 72%,
+      rgba(167, 230, 210, 0.65) 88%,
+      #a7e6d2 100%
+    ) border-box;
+
+  transition: transform 0.4s ease;
+}
+
+/* Hover gradient overlay */
+.y-folio__selected-work-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+
+  border-radius: inherit;
+  padding: 2px;
+
+  background: linear-gradient(
+    135deg,
+    #a7e6d2 0%,
+    rgba(255, 255, 255, 0.95) 35%,
+    #ffffff 50%,
+    rgba(99, 113, 109, 0.9) 80%,
+    #63716d 100%
+  );
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
+  /* Show the gradient only in the border area */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.y-folio__selected-work-card:hover::before {
+  opacity: 1;
 }
 
 .y-folio__selected-work-card-title {
@@ -296,12 +357,40 @@
 }
 
 
+/* =========================================================
+   SMALL LAPTOPS
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .y-folio__selected-works-scene-wrapper{
+    padding: 0px 30px;
+    margin-top: 40px;
+  }
+  
+}
+
 
 /* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 1023px) {
+
+  .y-folio__selected-works-title-text-span-second{
+      margin-top: -17px;
+  }
+  
+
+  .y-folio__selected-works-title-text-span-on svg {
+    width: 60%;
+    margin: 0px auto;
+  }
+
+  .y-folio__selected-works-scene-wrapper{
+    padding: 0px 20px;
+    margin-top: 40px;
+  }
+
   .y-folio__selected-works-grid {
     grid-template-columns:
       minmax(0, 1fr)
@@ -323,11 +412,11 @@
   }
 
   .y-folio__selected-work-card-title {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .y-folio__selected-work-card-description {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -336,6 +425,24 @@
 ========================================================= */
 
 @media (max-width: 767px) {
+
+  .y-folio__selected-works-title-text-span-on svg{
+    width: 80%;
+  }
+
+  .y-folio__selected-works-title-text-span-second{
+    font-size: 64px;
+  }
+
+    .y-folio__selected-works-title-text-span-second{
+      margin-top: -8px;
+  }
+
+  .y-folio__selected-works-scene-wrapper{
+    padding: 30px;
+    margin-top: 40px;
+  }
+
   .y-folio__selected-works-grid {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto;
@@ -374,10 +481,11 @@
   }
 
   .y-folio__selected-work-card-title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .y-folio__selected-work-card-description {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.3em;
   }
 }

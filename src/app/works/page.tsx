@@ -2,6 +2,7 @@ import SelectedWorksScene from "@/components/sections/SelectedWorkScene";
 import "../../styles/selectedWorks.css";
 import SelectedWorkText from "@/components/sections/SelectedWorkText";
 import Footer from "@/components/footer/Footer";
+
 export default function WorksLayout() {
   return (
     <>
@@ -10,6 +11,10 @@ export default function WorksLayout() {
       <Footer
         backgroundImage="/images/footer/footer-dark-bg.png"
         textColorClass="text-white"
+        brandIcon={[
+          "/images/footer/qoruz.png",
+          "/images/footer/hashfame.png",
+        ]}
       />
     </>
   );

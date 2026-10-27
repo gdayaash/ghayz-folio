@@ -69,7 +69,7 @@ export function AgencyBody() {
       </div>
 
       {/* Main content */}
-      <div className="container mx-auto flex w-full flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
         {/* Project overview */}
         <ProjectOverview
           title={study.projectOverview.title}
@@ -81,7 +81,7 @@ export function AgencyBody() {
           title={study.objective.title}
           description={study.objective.description}
         >
-          <p className="y-folio__objective-list-text text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="y-folio__objective-list-text text-base opacity-70">
             The experience had to:
           </p>
 
@@ -237,7 +237,7 @@ export function AgencyBody() {
 
         {/* Next case study navigation */}
         <div className="pb-12 sm:pb-16 md:pb-20">
-          <CaseStudyNav />
+          <CaseStudyNav currentSlug="agency" />
         </div>
       </div>
     </section>

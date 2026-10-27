@@ -56,7 +56,7 @@ export function WebsiteBody() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
         {/* Transformation, What Changed, Design Approach, Brand Impact */}
         {contentSections.map((section, index) => (
           <section
@@ -120,7 +120,7 @@ export function WebsiteBody() {
 
         {/* Next Project */}
         <div className="pb-12 sm:pb-16 md:pb-20">
-          <CaseStudyNav />
+          <CaseStudyNav currentSlug="website" />
         </div>
       </div>
     </section>

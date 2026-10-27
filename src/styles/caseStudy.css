@@ -1,3 +1,10 @@
+.case-study-content-container{
+  padding: 120px 100px 60px;
+}
+
+/* .case-study-content-container p{
+  font-weight: 200;
+} */
 
 /* ========================================
    CASE STUDY — GLASS CARDS
@@ -32,11 +39,9 @@
 
 .glass-card-case-study::before {
   content: "";
-
   position: absolute;
   inset: 0;
   padding: 1.5px;
-
   border-radius: inherit;
 
   background: linear-gradient(
@@ -66,13 +71,23 @@
    CASE STUDY — NAVIGATION
 ======================================== */
 
-.y-folio__case-study-nav-box {
+/* .y-folio__case-study-nav-box {
   background: linear-gradient(
     178deg,
     #0b855e 45%,
     #086145 64%,
     #041d16 86%,
     #001110 100%
+  );
+} */
+
+.y-folio__case-study-nav-box {
+  background: linear-gradient(
+    178deg,
+    #001110 0%,
+    #041d16 14%,
+    #086145 36%,
+    #0b855e 55%
   );
 }
 
@@ -159,10 +174,15 @@
 }
 
 /* ========================================
-   CASE STUDY — DESKTOP
+   CASE STUDY — TABLET
 ======================================== */
 
-@media (min-width: 1024px) {
+@media (max-width: 1023px) {
+
+  .case-study-content-container{
+    padding: 60px 20px 30px;
+  }
+
   .glass-card-case-study {
     padding: 60px 40px;
     border-radius: 40px;
@@ -173,7 +193,12 @@
    CASE STUDY — SMALL MOBILE
 ======================================== */
 
-@media (max-width: 380px) {
+@media (max-width: 767px) {
+
+  .case-study-content-container{
+    padding: 60px 15px 30px;
+  }
+
   .glass-card-case-study {
     padding: 20px 16px;
     border-radius: 20px;

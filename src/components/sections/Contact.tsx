@@ -6,7 +6,7 @@ import SealCheckIcon from "../icons/TickIcon";
 
 function ContactUsCta() {
   return (
-    <section className="y-folio__contact-us-wrapper py-8 sm:py-10 lg:py-12">
+    <section className="y-folio__contact-us-wrapper py-8 sm:py-10 lg:py-12 hidden md:block">
       <div className="y-folio__contact-us-inner flex flex-col gap-y-3">
         <div
           className="

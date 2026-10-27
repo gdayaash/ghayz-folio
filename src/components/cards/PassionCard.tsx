@@ -26,8 +26,7 @@ export default function PassionCard({
       </div>
 
       <div className="y-folio__passion-card-body-area">
-        <Image
-          className="y-folio__passion-card-image h-auto w-full object-cover"
+        <Image className="y-folio__passion-card-image h-auto w-full object-cover"
           src={picpath ?? ""}
           alt={title ?? ""}
           width={500}

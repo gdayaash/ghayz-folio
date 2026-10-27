@@ -5,5 +5,5 @@ export default function CaseStudyLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="min-h-screen bg-black text-white">{children}</div>;
+  return <div className="min-h-screen bg-black text-white case-study-layout">{children}</div>;
 }

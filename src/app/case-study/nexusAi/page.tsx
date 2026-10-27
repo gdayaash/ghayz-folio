@@ -57,7 +57,7 @@ export function NexusAiBody() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
         {contentSections.map((section, index) => (
           <section
             key={section.title}
@@ -117,7 +117,7 @@ export function NexusAiBody() {
 
         {/* Next Project */}
         <div className="pb-12 sm:pb-16 md:pb-20">
-          <CaseStudyNav />
+          <CaseStudyNav currentSlug="nexusAi" />
         </div>
       </div>
     </section>

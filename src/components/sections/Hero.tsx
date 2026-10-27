@@ -63,13 +63,12 @@ function Hero() {
                 text-[28px]
                 sm:text-[clamp(2.5rem,8vw,4.5rem)]
                 font-bold
-                leading-[1.05]
-                tracking-tight
+                leading-[1]
                 sm:px-0
               "
             >
-              <span className="tracking-[2px]">Spot the gap.</span>
-              <span className="tracking-[2px]">Solve the Problem.</span>
+              <span className="tracking-[1px]">Spot the gap.</span>
+              <span className="tracking-[1px]">Solve the Problem.</span>
             </h1>
 
             <p className="y-portfolio__hero-title-desc mx-auto px-2 text-center font-light leading-relaxed sm:text-[16px] opacity-70">

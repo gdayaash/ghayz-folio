@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {
+  DivideIcon,
   EnvelopeSimpleIcon,
   InstagramLogoIcon,
   LinkedinLogoIcon,
@@ -11,12 +12,14 @@ interface FooterProps {
   imagePath?: string;
   backgroundImage?: string;
   textColorClass?: string;
+  brandIcon ?: string[];
 }
 
 export default function Footer({
   imagePath = "/images/dp.png",
   backgroundImage = "/images/footer/footer-bg.png",
   textColorClass = "text-black",
+  brandIcon = []
 }: FooterProps) {
   return (
     <footer
@@ -50,12 +53,34 @@ export default function Footer({
 
           {/* Description */}
           <p
-            className={`y-folio__footer-desc w-full text-[16px] md:w-1/4 sm:w-full ${textColorClass} font-light`}
+            className={`y-folio__footer-desc w-full text-[24px] md:w-1/3 sm:w-full ${textColorClass} font-bold`}
           >
-            Product designer working across product strategy, experience, and
-            growth turning unclear problems into products people understand and
-            use.
+            Different Products. Different Challenges. One Design Philosophy
           </p>
+
+          <p
+            className={`y-folio__footer-desc w-full text-[16px] md:w-1/3 sm:w-full ${textColorClass} font-light`}
+          >
+            Designing across SaaS and marketplace products, translating complex challenges into intuitive experiences and meaningful visual stories.
+          </p>
+
+          {/* Brand Icons  */}
+
+          {brandIcon.length > 0 && (
+            <div className="y-folio__footer-brand-icons">
+              {brandIcon.map((icon) => (
+                <Image
+                  src={icon}
+                  alt="Brand logo"
+                  key={icon}
+                  width={100}
+                  height={100}
+                  className="y-folio__footer-brand-icon"
+                />
+              ))}
+            </div>
+          )}
+
 
           {/* Social icons */}
           <div

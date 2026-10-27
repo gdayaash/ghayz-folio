@@ -274,7 +274,7 @@ export function WaitListBody() {
       </div>
 
       {/* Main content */}
-      <div className="container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
         {/* Project overview */}
         <ProjectOverview
           title={study.projectOverview.title}
@@ -435,7 +435,7 @@ export function WaitListBody() {
 
         {/* Next case study navigation */}
         <div className="pb-12 sm:pb-16 md:pb-20">
-          <CaseStudyNav />
+          <CaseStudyNav currentSlug="waitList" />
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ const works = [
     title: "HashFame | Pre-Launch",
     description:
       "Building a Network Before the App",
-      image: "/images/case-study/waitlist-bg.png",
+      image: "/images/works/waitlist-bg.png",
     link: "/case-study/waitlist"  
   },
   {
@@ -18,7 +18,7 @@ const works = [
     title: "HashFame | Post-Launch",
     description:
       "Turning Existing Profiles into Active Creators",
-      image: "/images/case-study/creator-bg.png",
+      image: "/images/works/creator-bg.png",
       link: "/case-study/creator"  
   },
   {
@@ -26,7 +26,7 @@ const works = [
     title: "Qoruz | Decks Redesign",
     description:
       "Making the Product Its Own Salesperson",
-       image: "/images/case-study/agency-bg.png",
+       image: "/images/works/agency-bg.png",
       link: "/case-study/agency"  
   },
     {
@@ -34,7 +34,7 @@ const works = [
     title: "HashFame | Website Redesign",
     description:
       "Designed to Make an Impression",
-       image: "/images/case-study/agency-bg.png",
+       image: "/images/works/designed-bg.png",
        link: "/case-study/website"  
 
   },
@@ -43,7 +43,7 @@ const works = [
     title: "Qoruz | Nexus AI",
     description:
       "Making Complex AI Feel Simple.",
-       image: "/images/case-study/agency-bg.png",
+       image: "/images/works/complex-ai.png",
        link: "/case-study/nexusAi"  
 
   },
@@ -52,7 +52,7 @@ const works = [
     title: "HashFame | Marketing & Visuals",
     description:
       "Making Every Feature a Story",
-       image: "/images/case-study/agency-bg.png",
+       image: "/images/works/marketing-visuals.png",
        link: "/case-study/marketing-visuals"  
 
   },
@@ -100,41 +100,41 @@ export default function SelectedWorksScene() {
       });
 
       // Initial pause
-      entryTimeline.to({}, { duration: 0.7 });
+      entryTimeline.to({}, { duration: 0.01 });
 
       // Pointer appears
       entryTimeline.to(pointerTrack, {
         opacity: 1,
-        duration: 0.55,
+        duration: 0.2,
         ease: "power2.out",
       });
 
-      entryTimeline.to({}, { duration: 0.15 });
+      entryTimeline.to({}, { duration: 0.5 });
 
       // Dashed line appears
       entryTimeline.to(line, {
         opacity: 1,
-        duration: 0.65,
+        duration: 0.1,
         ease: "power2.out",
       });
 
-      entryTimeline.to({}, { duration: 0.2 });
+      entryTimeline.to({}, { duration: 0.1 });
 
       // Glowing segment appears
       entryTimeline.to(activeLine, {
         opacity: 1,
-        duration: 0.5,
+        duration: 0.1,
         ease: "power2.out",
       });
 
-      entryTimeline.to({}, { duration: 0.3 });
+      entryTimeline.to({}, { duration: 0.1 });
 
       // First card enters
       if (cards[0]) {
         entryTimeline.to(cards[0], {
           opacity: 1,
           y: 0,
-          duration: 0.7,
+          duration: 0.1,
           ease: "power3.out",
         });
       }

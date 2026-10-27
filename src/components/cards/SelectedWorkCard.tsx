@@ -16,12 +16,12 @@ export default function SelectedWorkCard({
   link
 }: SelectedWorkCardProps) {
   return (
-    <article className="y-folio__selected-work-card flex flex-col gap-4 justify-between">
-      <a href={link}>
+    <article className="y-folio__selected-work-card">
+      <a href={link} className="flex flex-col gap-14 justify-between">
         <div className="y-folio__selected-work-card-content flex flex-col gap-2">
           <h2 className="y-folio__selected-work-card-title">{title}</h2>
 
-          <p className="y-folio__selected-work-card-description text-[#808584]">
+          <p className="y-folio__selected-work-card-description text-[#808584] leading-[1.2em]">
             {description}
           </p>
         </div>

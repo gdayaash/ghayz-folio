@@ -3,7 +3,7 @@ import SmoothScroll from "@/components/ScrollSmooth/ScrollSmooth";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ghaytheri S",
+  title: "Ghaytheri S | Portfolio",
   description: "Creative designer crafting meaningful digital experiences.",
 };
 

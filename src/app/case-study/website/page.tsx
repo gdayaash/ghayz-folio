@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function Website() {
   return (
     <>
-      <Header />
+      <Header btnBgColor="bg-white" btnTxtColor="text-black" />
       <WebsiteBody />
     </>
   );

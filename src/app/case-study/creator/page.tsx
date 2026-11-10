@@ -27,7 +27,7 @@ const requirementIcons = {
 export default function Creator() {
   return (
     <>
-      <Header />
+      <Header btnBgColor="bg-white" btnTxtColor="text-black" />
       <CreatorBody />
     </>
   );
@@ -61,7 +61,7 @@ export function CreatorBody() {
       </div>
 
       {/* Main content */}
-      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-30 md:pt-32 lg:px-8 lg:pt-40">
         {/* Project overview */}
         <ProjectOverview
           title={study.projectOverview.title}
@@ -109,23 +109,23 @@ export function CreatorBody() {
             {study.problemsFound.title}
           </h2>
 
-          <p className="y-folio__problems-found-description break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="y-folio__problems-found-description break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
             {study.problemsFound.description}
           </p>
 
-          <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
             <strong>Our Main Challenge:</strong> {study.problemsFound.question}
           </p>
 
-          <p className="text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
             We approached this as an evolving acquisition funnel:
           </p>
 
-          <ol className="y-folio__problems-found-approach-list list-decimal space-y-3 pl-5 sm:pl-7">
+          <ol className="y-folio__problems-found-approach-list list-decimal space-y-3 pl-5 sm:pl-7 font-[300]">
             {study.problemsFound.answer.map((item, index) => (
               <li
                 key={`${index}-${item.slice(0, 30)}`}
-                className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl"
+                className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]"
               >
                 {item}
               </li>
@@ -136,17 +136,17 @@ export function CreatorBody() {
           <div className="y-folio__problems-found-comment-box rounded-lg border-l-4 border-[#03B197] bg-white/5 p-4 sm:rounded-xl sm:p-6">
             <p className="break-words text-base sm:text-lg md:text-xl lg:text-2xl">
               <strong>Comments:</strong>{" "}
-              <span className="opacity-70">{study.comments.text}</span>
+              <span className="opacity-70 font-[300]">{study.comments.text}</span>
             </p>
           </div>
 
           {/* Approaches */}
           <div className="y-folio__approach-wrapper pt-8 sm:pt-12 md:pt-16">
-            <h2 className="y-folio__approach-title mb-4 text-3xl font-bold sm:text-4xl md:mb-6 md:text-5xl">
+            <h2 className="y-folio__approach-title mb-4 text-3xl font-bold sm:text-4xl md:mb-12 md:text-5xl">
               Approach
             </h2>
 
-            <div className="flex flex-col gap-8 sm:gap-10">
+            <div className="flex flex-col gap-8 sm:gap-15">
               {study.approach.map((approach, index) => (
                 <article
                   key={`${approach.title}-${index}`}
@@ -159,7 +159,7 @@ export function CreatorBody() {
                   {approach.description.map((paragraph, paragraphIndex) => (
                     <p
                       key={`${paragraphIndex}-${paragraph.slice(0, 30)}`}
-                      className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl"
+                      className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]"
                     >
                       {paragraph}
                     </p>
@@ -175,7 +175,7 @@ export function CreatorBody() {
               Designs
             </h2>
 
-            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
               {study.designs.description}
             </p>
 
@@ -193,7 +193,7 @@ export function CreatorBody() {
               Business Impact
             </h2>
 
-            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
               {study.businessImpact.description}
             </p>
 
@@ -211,7 +211,7 @@ export function CreatorBody() {
                     {counter.counterSubtitle}
                   </h3>
 
-                  <p className="break-words text-sm opacity-70 sm:text-base md:text-lg">
+                  <p className="break-words text-sm opacity-70 sm:text-base md:text-lg font-[300]">
                     {counter.description}
                   </p>
                 </article>

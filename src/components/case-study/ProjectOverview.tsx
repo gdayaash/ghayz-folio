@@ -29,7 +29,7 @@ export default function ProjectOverview({
   description,
 }: ProjectOverviewProps) {
   return (
-    <div className="y-folio__case-study-waitlist-project-overview flex min-w-0 flex-col gap-3 sm:gap-4">
+    <div className="y-folio__case-study-waitlist-project-overview flex min-w-0 flex-col gap-3 sm:gap-8">
       <h2 className="y-folio__project-overview-title text-3xl font-bold sm:text-4xl md:text-5xl">
         {title}
       </h2>

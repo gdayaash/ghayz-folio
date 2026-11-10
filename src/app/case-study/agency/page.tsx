@@ -27,7 +27,7 @@ const requirementIcons = {
 export default function Agency() {
   return (
     <>
-      <Header />
+      <Header btnBgColor="bg-white" btnTxtColor="text-black" />
       <AgencyBody />
     </>
   );
@@ -69,7 +69,7 @@ export function AgencyBody() {
       </div>
 
       {/* Main content */}
-      <div className="container case-study-content-container mx-auto flex w-full flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-30 md:pt-32 lg:px-8 lg:pt-40">
         {/* Project overview */}
         <ProjectOverview
           title={study.projectOverview.title}
@@ -81,18 +81,18 @@ export function AgencyBody() {
           title={study.objective.title}
           description={study.objective.description}
         >
-          <p className="y-folio__objective-list-text text-base opacity-70">
+          <p className="y-folio__objective-list-text text-base opacity-70 text-[24px] font-[300]">
             The experience had to:
           </p>
 
-          <ul className="y-folio__objective-pointer-items flex flex-col gap-3 text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <ul className="y-folio__objective-pointer-items flex flex-col gap-3 text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
             {study.objective.requirements.map((item, index) => {
               const Icon = requirementIcons[item.icon];
 
               return (
                 <li
                   key={`${item.icon}-${index}`}
-                  className="flex min-w-0 items-start gap-3"
+                  className="flex min-w-0 items-start gap-3 font-[300]"
                 >
                   <Icon
                     size={24}
@@ -121,18 +121,20 @@ export function AgencyBody() {
             {problemDescriptions.map((paragraph, index) => (
               <p
                 key={`${index}-${paragraph.slice(0, 30)}`}
-                className="y-folio__problems-found-description break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl"
+                className="y-folio__problems-found-description break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]"
               >
                 {paragraph}
               </p>
             ))}
           </div>
 
-          <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
-            <strong>Our Main Challenge:</strong> {study.problemsFound.question}
+          <p className="break-words text-base sm:text-lg md:text-xl lg:text-2xl font-[300]">
+            <strong className="text-white">Our Main Challenge became:</strong> <span className="opacity-70">
+              {study.problemsFound.question}
+              </span>
           </p>
 
-          <p className="text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
             We approached this by focusing on the following:
           </p>
 
@@ -140,7 +142,7 @@ export function AgencyBody() {
             {study.problemsFound.answer.map((item, index) => (
               <li
                 key={`${index}-${item.slice(0, 30)}`}
-                className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl"
+                className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]"
               >
                 {item.trim()}
               </li>
@@ -151,21 +153,21 @@ export function AgencyBody() {
           <div className="y-folio__problems-found-comment-box rounded-lg border-l-4 border-[#03B197] bg-white/5 p-4 sm:rounded-xl sm:p-6">
             <p className="break-words text-base sm:text-lg md:text-xl lg:text-2xl">
               <strong>Comments:</strong>{" "}
-              <span className="opacity-70">{study.comments.text}</span>
+              <span className="opacity-70 font-[300]">{study.comments.text}</span>
             </p>
           </div>
 
           {/* Approaches */}
           <div className="y-folio__approach-wrapper pt-8 sm:pt-12 md:pt-16">
-            <h2 className="y-folio__approach-title mb-4 text-3xl font-bold sm:text-4xl md:mb-6 md:text-5xl">
+            <h2 className="y-folio__approach-title mb-4 text-3xl font-bold sm:text-4xl md:mb-12 md:text-5xl">
               Approach
             </h2>
 
-            <div className="flex flex-col gap-8 sm:gap-10">
+            <div className="flex flex-col gap-8 sm:gap-15">
               {study.approach.map((approach, index) => (
                 <article
                   key={`${approach.title}-${index}`}
-                  className="y-folio__case-study-approach-box flex min-w-0 flex-col gap-3 sm:gap-4"
+                  className="y-folio__case-study-approach-box flex min-w-0 flex-col gap-3 sm:gap-4 font-[300]"
                 >
                   <h3 className="text-xl font-semibold sm:text-2xl md:text-[26px]">
                     {approach.title}
@@ -190,7 +192,7 @@ export function AgencyBody() {
               Designs
             </h2>
 
-            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]">
               {study.designs.description}
             </p>
 

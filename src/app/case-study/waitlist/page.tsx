@@ -1,216 +1,3 @@
-// "use client";
-
-// import CaseStudyHero from "@/components/case-study/CaseHero";
-// import CaseStudyNav from "@/components/case-study/CaseStudyNav";
-// import DesignIframe from "@/components/case-study/DesignIframe";
-// import Objective from "@/components/case-study/Objective";
-// import ProjectOverview from "@/components/case-study/ProjectOverview";
-// import Header from "@/components/header/Header";
-// import { caseStudies } from "@/data/caseStudies";
-
-// import {
-//   Target,
-//   ChatCircle,
-//   ShieldCheck,
-//   DeviceMobile,
-// } from "@phosphor-icons/react";
-
-// import Image from "next/image";
-
-// const requirementIcons = {
-//   target: Target,
-//   "message-circle": ChatCircle,
-//   "shield-check": ShieldCheck,
-//   smartphone: DeviceMobile,
-// } as const;
-
-// export default function WaitList() {
-//   return (
-//     <>
-//       <Header />
-//       <WaitListBody />
-//     </>
-//   );
-// }
-
-// export function WaitListBody() {
-//   const study = caseStudies.waitList;
-
-//   return (
-//     <section className="y-folio__case-study-waitlist-wrapper">
-//       {/* Hero */}
-//       <div className="container mx-auto">
-//         <div className="y-folio__case-study-banner-area">
-//           <CaseStudyHero title={study.title} subTitle={study.subTitle} />
-//         </div>
-//       </div>
-
-//       {/* Hero image */}
-//       <div className="container mx-auto w-full">
-//         <div className="y-folio__case-study-banner-image">
-//           <Image
-//             src={study.heroImage.src}
-//             alt={study.heroImage.alt}
-//             width={1200}
-//             height={600}
-//             priority
-//             className="h-auto w-full"
-//             sizes="(max-width: 1200px) 100vw, 1200px"
-//           />
-//         </div>
-//       </div>
-
-//       <div className="container mx-auto flex flex-col gap-24 pt-48">
-//         {/* Project overview */}
-//         <ProjectOverview
-//           title={study.projectOverview.title}
-//           description={study.projectOverview.description}
-//         />
-
-//         {/* Objective */}
-//         <Objective
-//           title={study.objective.title}
-//           description={study.objective.description}
-//         >
-//           <p className="y-folio__objective-list-text text-[24px] opacity-70">
-//             The experience had to:
-//           </p>
-
-//           <ul className="y-folio__objective-pointer-items flex flex-col gap-3 text-[24px] opacity-70">
-//             {study.objective.requirements.map((item) => {
-//               const Icon = requirementIcons[item.icon];
-
-//               return (
-//                 <li key={item.icon} className="flex items-start gap-3">
-//                   <Icon
-//                     size={24}
-//                     weight="fill"
-//                     color="red"
-//                     className="mt-1 shrink-0"
-//                     aria-hidden="true"
-//                   />
-
-//                   <span>{item.description}</span>
-//                 </li>
-//               );
-//             })}
-//           </ul>
-//         </Objective>
-
-//         {/* Problems found */}
-//         <div className="y-folio__case-study-problems-found flex flex-col gap-6">
-//           <h2 className="y-folio__problems-found-title text-[48px] font-bold">
-//             {study.problemsFound.title}
-//           </h2>
-
-//           <p className="y-folio__problems-found-description text-[24px] opacity-70">
-//             {study.problemsFound.description}
-//           </p>
-
-//           <p className="text-[24px] opacity-70">
-//             <strong>Our Main Challenge:</strong> {study.problemsFound.question}
-//           </p>
-
-//           <p className="text-[24px] opacity-70">
-//             We approached this as an evolving acquisition funnel:
-//           </p>
-
-//           <ol className="y-folio__problems-found-approach-list list-decimal space-y-3 pl-7">
-//             {study.problemsFound.answer.map((item) => (
-//               <li key={item} className="text-[24px] opacity-70">
-//                 {item}
-//               </li>
-//             ))}
-//           </ol>
-
-//           {/* Comments */}
-//           <div className="y-folio__problems-found-comment-box rounded-[10px] border-l-[5px] border-[#03B197] bg-white/5 p-4">
-//             <p className="text-[24px]">
-//               <strong>Comments:</strong>{" "}
-//               <span className="opacity-70">{study.comments.text}</span>
-//             </p>
-//           </div>
-
-//           {/* Approaches */}
-//           <div className="y-folio__approach-wrapper pt-20">
-//             <h2 className="y-folio__approach-title mb-3 text-[48px] font-bold">
-//               Approach
-//             </h2>
-
-//             <div className="flex flex-col gap-10">
-//               {study.approach.map((approach) => (
-//                 <article
-//                   key={approach.title}
-//                   className="y-folio__case-study-approach-box flex flex-col gap-4"
-//                 >
-//                   <h3 className="text-[26px] font-semibold">
-//                     {approach.title}
-//                   </h3>
-
-//                   {approach.description.map((paragraph) => (
-//                     <p key={paragraph} className="text-[24px] opacity-70">
-//                       {paragraph}
-//                     </p>
-//                   ))}
-//                 </article>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Designs */}
-//           <div className="y-folio__case-study-designs flex flex-col gap-4 pt-16">
-//             <h2 className="text-[48px] font-bold">Designs</h2>
-
-//             <p className="text-[24px] opacity-70">
-//               {study.designs.description}
-//             </p>
-
-//             <div className="y-folio__case-study-iframe-box">
-//               <DesignIframe
-//                 title={"Nice"}
-//                 iframePath="https://embed.figma.com/design/xoo4fAryF3SQ7wnWgpVRQt/portfolio?node-id=330-95&embed-host=share"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Business impact */}
-//           <div className="y-folio__case-study-business-impact flex flex-col gap-6 pt-16">
-//             <h2 className="text-[48px] font-bold">Business Impact</h2>
-
-//             <p className="text-[24px] opacity-70">
-//               {study.businessImpact.description}
-//             </p>
-
-//             <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-12">
-//               {study.businessImpact.counters.map((counter) => (
-//                 <article
-//                   key={counter.counterSubtitle}
-//                   className="flex flex-col gap-3 glass-card-case-study text-center"
-//                 >
-//                   <p className="text-[80px] font-semibold text-white text-center">
-//                     {counter.counterTitle}
-//                   </p>
-
-//                   <h3 className="text-[24px] font-semibold text-white">
-//                     {counter.counterSubtitle}
-//                   </h3>
-
-//                   <p className="text-[20px] opacity-70">
-//                     {counter.description}
-//                   </p>
-//                 </article>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* {Next CaseStudy}  */}
-//         <CaseStudyNav />
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import CaseStudyHero from "@/components/case-study/CaseHero";
@@ -240,7 +27,7 @@ const requirementIcons = {
 export default function WaitList() {
   return (
     <>
-      <Header />
+      <Header btnBgColor="bg-white" btnTxtColor="text-black" />
       <WaitListBody />
     </>
   );
@@ -274,7 +61,7 @@ export function WaitListBody() {
       </div>
 
       {/* Main content */}
-      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-30 md:pt-32 lg:px-8 lg:pt-40">
         {/* Project overview */}
         <ProjectOverview
           title={study.projectOverview.title}
@@ -355,11 +142,11 @@ export function WaitListBody() {
 
           {/* Approaches */}
           <div className="y-folio__approach-wrapper pt-8 sm:pt-12 md:pt-16">
-            <h2 className="y-folio__approach-title mb-4 text-3xl font-bold sm:text-4xl md:mb-6 md:text-5xl">
+            <h2 className="y-folio__approach-title mb-4 text-3xl font-bold sm:text-4xl md:mb-12 md:text-5xl">
               Approach
             </h2>
 
-            <div className="flex flex-col gap-8 sm:gap-10">
+            <div className="flex flex-col gap-8 sm:gap-15">
               {study.approach.map((approach, index) => (
                 <article
                   key={`${approach.title}-${index}`}

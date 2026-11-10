@@ -105,7 +105,7 @@ export default function CaseStudyNav({
             {isPrevious ? "Previous Project" : "Next Project"}
           </p>
 
-          <h4 className="y-folio__case-study-nav-title text-center text-[18px] sm:text-[24px] text-white opacity-90">
+          <h4 className="y-folio__case-study-nav-title text-center text-[18px] sm:text-[24px] text-white opacity-90 font-[300]">
             {adjacent.title}
           </h4>
 

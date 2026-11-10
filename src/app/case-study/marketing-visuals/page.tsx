@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function MarketingVisuals() {
   return (
     <>
-      <Header />
+      <Header btnBgColor="bg-white" btnTxtColor="text-black" />
       <MarketingVisualsBody />
     </>
   );
@@ -55,7 +55,7 @@ export function MarketingVisualsBody() {
       </div>
 
       {/* Main Content */}
-      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-24 md:pt-32 lg:px-8 lg:pt-40">
+      <div className="container case-study-content-container mx-auto flex w-full min-w-0 flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-30 md:pt-32 lg:px-8 lg:pt-40">
         {/* Challenge, Approach, Design Thinking */}
         {contentSections.map((section) => (
           <section
@@ -76,7 +76,7 @@ export function MarketingVisualsBody() {
               {section.description.map((paragraph, paragraphIndex) => (
                 <p
                   key={paragraphIndex}
-                  className="break-words text-base leading-relaxed opacity-75 sm:text-lg lg:text-[24px]"
+                  className="break-words text-base leading-relaxed opacity-75 sm:text-lg lg:text-[24px] font-[300]"
                 >
                   {paragraph.trim()}
                 </p>
@@ -98,7 +98,7 @@ export function MarketingVisualsBody() {
                   {item.title}
                 </h3>
 
-                <p className="break-words text-base leading-relaxed opacity-75 sm:text-lg lg:text-[24px]">
+                <p className="break-words text-base leading-relaxed opacity-75 sm:text-lg lg:text-[24px] font-[300]">
                   {item.description.trim()}
                 </p>
               </div>
@@ -112,7 +112,7 @@ export function MarketingVisualsBody() {
             Designs
           </h2>
 
-          <p className="break-words text-base leading-relaxed opacity-75 sm:text-lg lg:text-[24px]">
+          <p className="break-words text-base leading-relaxed opacity-75 sm:text-lg lg:text-[24px] font-[300]">
             {study.designs.description}
           </p>
 

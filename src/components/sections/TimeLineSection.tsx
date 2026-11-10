@@ -235,7 +235,7 @@ export default function TimelineSection() {
           </div>
         </div>
       </div>
-      <div className="y-folio__timeline-section-card-gradient-strip py-20 absolute w-full"></div>
+      {/* <div className="y-folio__timeline-section-card-gradient-strip py-20 absolute w-full"></div> */}
     </section>
   );
 }

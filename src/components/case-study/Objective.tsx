@@ -44,7 +44,7 @@ export default function Objective({
         {title}
       </h2>
 
-      <p className="y-folio__case-study-objective-desc break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+      <p className="y-folio__case-study-objective-desc break-words text-base font-[300] opacity-70 sm:text-lg md:text-xl lg:text-2xl">
         {description}
       </p>
 

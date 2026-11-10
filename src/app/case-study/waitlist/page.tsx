@@ -286,7 +286,7 @@ export function WaitListBody() {
           title={study.objective.title}
           description={study.objective.description}
         >
-          <p className="y-folio__objective-list-text text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="y-folio__objective-list-text text-base y-folio-case-study-page-descriptions opacity-70 sm:text-lg md:text-xl lg:text-2xl">
             The experience had to:
           </p>
 
@@ -297,7 +297,7 @@ export function WaitListBody() {
               return (
                 <li
                   key={`${item.icon}-${index}`}
-                  className="flex min-w-0 items-start gap-3"
+                  className="flex min-w-0 items-start gap-3 font-[300]"
                 >
                   <Icon
                     size={24}
@@ -322,15 +322,15 @@ export function WaitListBody() {
             {study.problemsFound.title}
           </h2>
 
-          <p className="y-folio__problems-found-description break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="y-folio__problems-found-description break-words text-base opacity-70 font-[300] sm:text-lg md:text-xl lg:text-2xl">
             {study.problemsFound.description}
           </p>
 
-          <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="break-words text-base opacity-70 font-[300] sm:text-lg md:text-xl lg:text-2xl">
             <strong>Our Main Challenge:</strong> {study.problemsFound.question}
           </p>
 
-          <p className="text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-base opacity-70 font-[300] sm:text-lg md:text-xl lg:text-2xl">
             We approached this as an evolving acquisition funnel:
           </p>
 
@@ -338,7 +338,7 @@ export function WaitListBody() {
             {study.problemsFound.answer.map((item, index) => (
               <li
                 key={`${index}-${item.slice(0, 30)}`}
-                className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl"
+                className="break-words text-base opacity-70 font-[300] sm:text-lg md:text-xl lg:text-2xl"
               >
                 {item}
               </li>
@@ -349,7 +349,7 @@ export function WaitListBody() {
           <div className="y-folio__problems-found-comment-box rounded-lg border-l-4 border-[#03B197] bg-white/5 p-4 sm:rounded-xl sm:p-6">
             <p className="break-words text-base sm:text-lg md:text-xl lg:text-2xl">
               <strong>Comments:</strong>{" "}
-              <span className="opacity-70">{study.comments.text}</span>
+              <span className="opacity-70 font-[300]">{study.comments.text}</span>
             </p>
           </div>
 
@@ -372,7 +372,7 @@ export function WaitListBody() {
                   {approach.description.map((paragraph, paragraphIndex) => (
                     <p
                       key={`${paragraphIndex}-${paragraph.slice(0, 30)}`}
-                      className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl"
+                      className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl font-[300]"
                     >
                       {paragraph}
                     </p>
@@ -388,7 +388,7 @@ export function WaitListBody() {
               Designs
             </h2>
 
-            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+            <p className="break-words text-base opacity-70 font-[300] sm:text-lg md:text-xl lg:text-2xl">
               {study.designs.description}
             </p>
 
@@ -406,7 +406,7 @@ export function WaitListBody() {
               Business Impact
             </h2>
 
-            <p className="break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+            <p className="break-words text-base opacity-70 font-[300] sm:text-lg md:text-xl lg:text-2xl">
               {study.businessImpact.description}
             </p>
 
@@ -416,7 +416,7 @@ export function WaitListBody() {
                   key={`${counter.counterSubtitle}-${index}`}
                   className="glass-card-case-study flex min-w-0 flex-col items-center gap-3 text-center"
                 >
-                  <p className="break-words text-5xl font-medium text-white sm:text-6xl md:text-7xl lg:text-[80px]">
+                  <p className="break-words text-5xl font-[600] text-white sm:text-6xl md:text-7xl lg:text-[80px]">
                     {counter.counterTitle}
                   </p>
 
@@ -424,7 +424,7 @@ export function WaitListBody() {
                     {counter.counterSubtitle}
                   </h3>
 
-                  <p className="break-words text-sm opacity-70 sm:text-base md:text-[24px]">
+                  <p className="break-words text-sm opacity-70 font-[300] sm:text-base md:text-[24px]">
                     {counter.description}
                   </p>
                 </article>

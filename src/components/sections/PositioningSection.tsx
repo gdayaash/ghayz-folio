@@ -431,7 +431,7 @@ export default function PositioningSection() {
                     "
                   />
 
-                  <span className="text-[20px] font-light opacity-[50%]">
+                  <span className="text-[20px] text-white font-light">
                     {item.description}
                   </span>
                 </div>

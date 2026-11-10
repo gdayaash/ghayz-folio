@@ -50,13 +50,15 @@
 .timeline-section-gradient-effect {
   position: relative;
   box-sizing: border-box;
-  background: linear-gradient(
+  /* background: linear-gradient(
     358deg,
     #0b855e 45%,
     #086145 64%,
     #041d16 86%,
     #001110 100%
-  );
+  ); */
+  background-image: url(/images/home/home-timeline.png);
+  background-size: cover;
   padding: 60px 80px;
 }
 
@@ -210,14 +212,16 @@
 ======================================== */
 
 .y-folio__contact-us-box {
-  background: radial-gradient(
+  /* background: radial-gradient(
     ellipse at 50% 115%,
     #ffffff 0%,
     #d5eee5 18%,
     #15966f 45%,
     #086145 70%,
     #001110 100%
-  );
+  ); */
+  background-image: url("/images/home/contact-bg.png");
+  background-size: cover;
 
   border-radius: 80px;
   position: relative;

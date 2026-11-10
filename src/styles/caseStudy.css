@@ -1,10 +1,19 @@
-.case-study-content-container{
-  padding: 120px 100px 60px;
+
+/* ========================================
+   CASE STUDY — DESKTOP
+======================================== */
+
+.case-study-content-container {
+  /* padding: 120px 100px 60px; */
+  width: 60%;
+  max-width: 60%;
+  margin: 0px auto;
 }
 
-/* .case-study-content-container p{
-  font-weight: 200;
+/* .case-study-content-container p, .case-study-content-container ul{
+  font-weight: 300;
 } */
+
 
 /* ========================================
    CASE STUDY — GLASS CARDS
@@ -67,6 +76,7 @@
   pointer-events: none;
 }
 
+
 /* ========================================
    CASE STUDY — NAVIGATION
 ======================================== */
@@ -91,6 +101,7 @@
   );
 }
 
+
 /* ========================================
    CASE STUDY — PAGE WIDTH
 ======================================== */
@@ -113,11 +124,17 @@
   max-width: 100%;
 }
 
+
+/* ========================================
+   CASE STUDY — BANNER IMAGE
+======================================== */
+
 .y-folio__case-study-banner-image img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 
 /* ========================================
    CASE STUDY — FIGMA EMBED
@@ -149,6 +166,7 @@
   border: 0;
 }
 
+
 /* ========================================
    CASE STUDY — COMMENTS
 ======================================== */
@@ -158,11 +176,30 @@
   overflow-wrap: anywhere;
 }
 
+/* ==== */
 /* ========================================
-   CASE STUDY — TABLET
+   CASE STUDY — SMALL LAPTOPS
+   1024px – 1440px
 ======================================== */
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+  .case-study-content-container {
+    /* padding: 60px 20px 30px; */
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+
+/* ========================================
+   CASE STUDY — TABLET
+   640px – 1023px
+======================================== */
+
+@media (min-width: 640px) and (max-width: 1023px) {
+
   .glass-card-case-study {
     padding: 32px;
     border-radius: 32px;
@@ -171,32 +208,32 @@
   .y-folio__case-study-iframe-box {
     border-radius: 16px;
   }
-}
 
-/* ========================================
-   CASE STUDY — TABLET
-======================================== */
-
-@media (max-width: 1023px) {
-
-  .case-study-content-container{
-    padding: 60px 20px 30px;
+  .case-study-content-container {
+    /* padding: 60px 20px 30px; */
+    width: 100%;
+    max-width: 100%;
   }
 
   .glass-card-case-study {
     padding: 60px 40px;
     border-radius: 40px;
   }
+
 }
 
+
 /* ========================================
-   CASE STUDY — SMALL MOBILE
+   CASE STUDY — MOBILE
+   0px – 639px
 ======================================== */
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
 
-  .case-study-content-container{
-    padding: 60px 15px 30px;
+  .case-study-content-container {
+    /* padding: 60px 15px 30px; */
+    width: 100%;
+    max-width: 100%;
   }
 
   .glass-card-case-study {
@@ -207,4 +244,5 @@
   .y-folio__case-study-iframe-box {
     border-radius: 8px;
   }
+
 }

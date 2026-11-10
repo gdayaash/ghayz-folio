@@ -91,7 +91,7 @@ export const caseStudies = {
 
       counters: [
         {
-          counterTitle: "5k",
+          counterTitle: "5K",
           counterSubtitle: "Waitlist — pre-launch",
           description:
             "This is abt he detailed explanation of project, which last 2 lines he detailed explanation ",

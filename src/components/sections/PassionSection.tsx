@@ -145,10 +145,8 @@ export default function PassionSection() {
       <div className="container mx-auto">
         {/* Heading */}
         <div className="y-folio__passion-heading-area">
-          <h2 className="y-folio__passion-section-title text-center text-[clamp(1.75rem,5vw,3rem)] font-bold leading-tight">
-            <b>
+          <h2 className="y-folio__passion-section-title text-center text-[clamp(1.75rem,5vw,3rem)] font-[600] leading-tight">
               Beyond the Interface
-            </b>
           </h2>
         </div>
 

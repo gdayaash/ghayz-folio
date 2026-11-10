@@ -34,7 +34,7 @@ export default function ProjectOverview({
         {title}
       </h2>
 
-      <p className="y-folio__project-overview-description break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
+      <p className="y-folio__project-overview-description font-[300] break-words text-base opacity-70 sm:text-lg md:text-xl lg:text-2xl">
         {description}
       </p>
     </div>

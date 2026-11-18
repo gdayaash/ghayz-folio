@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { WhatsappLogoIcon } from "@phosphor-icons/react";
+import { EnvelopeIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
 
 interface HeaderProps{
   btnBgColor?: string;
@@ -73,13 +73,12 @@ export default function Header({btnBgColor = "bg-black", btnTxtColor = "text-whi
 
             {/* Contact CTA */}
             <a
-              href="https://wa.me/8248914992"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:ghaytheris@gmail.com"
               className={`inline-flex shrink-0 items-center justify-center gap-2 rounded-[12px] ${btnBgColor} px-2 py-[10px] sm:px-3 text-sm ${btnTxtColor} transition-opacity hover:opacity-80 sm:px-2 sm:py-[10px] sm:text-base md:w-[187px]`}
             >
-              <WhatsappLogoIcon
-                weight="regular"
+
+              <EnvelopeIcon
+               weight="regular"
                 aria-hidden="true"
                 className="size-5 shrink-0 sm:size-6"
               />

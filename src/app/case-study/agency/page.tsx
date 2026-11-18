@@ -54,7 +54,7 @@ export function AgencyBody() {
       </div>
 
       {/* Hero image */}
-      <div className="container mx-auto w-full px-4 sm:px-6 lg:px-8">
+      {/* <div className="container mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="y-folio__case-study-banner-image w-full overflow-hidden rounded-xl sm:rounded-2xl">
           <Image
             src={study.heroImage.src}
@@ -66,7 +66,7 @@ export function AgencyBody() {
             sizes="(max-width: 640px) 100vw, (max-width: 1200px) 100vw, 1200px"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Main content */}
       <div className="container case-study-content-container mx-auto flex w-full flex-col gap-16 px-4 pt-16 sm:gap-20 sm:px-6 sm:pt-24 md:gap-30 md:pt-32 lg:px-8 lg:pt-40">

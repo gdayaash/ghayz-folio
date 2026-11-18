@@ -26,7 +26,7 @@ const works = [
     title: "Qoruz | Decks Redesign",
     description:
       "Making the Product Its Own Salesperson",
-       image: "/images/works/agency-bg.png",
+       image: "/images/works/waitlist-bg.png",
       link: "/case-study/agency"  
   },
     {

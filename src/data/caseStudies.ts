@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const caseStudies = {
   waitList: {
     title: "Building a Network Before the App",
@@ -558,6 +560,56 @@ export const caseStudies = {
       "The Nexus AI presentation communicates complex AI capabilities through a clear visual narrative, connecting the technology's underlying intelligence to practical marketing outcomes.",
   },
 },
+productDesign:{
+    title: "Building the Creator Experience",
+    subTitle:
+    "Designing mobile and web experiences across creator profiles, onboarding, and campaign discovery.",
+
+    projectOverview: {
+    title: "Project Overview",
+    description:
+      "Designed core product experiences across HashFame's mobile app and web application, covering creator identity, onboarding, and campaign discovery.",
+    },
+
+    objective:{
+      title: "Objective",
+      description: "Create intuitive product experiences that help creators establish their digital identity, get started on HashFame, and discover relevant brand campaigns."
+    },
+
+    myRole:{
+      title: "My Role",
+      description: "Product Designer — UI/UX Design, User Flows, Wireframing, Interface Design and Prototyping."
+    },
+
+    keyAreasofWork:[
+      {
+        title: "Creator Profile — Mini Link-in-Bio",
+        description: "Designed a compact creator profile experience that brings social presence, creator information, and digital identity together in one shareable page."
+      },
+      {
+        title: "Creator Onboarding",
+        description: "Designed onboarding screens and user flows to help creators get started, set up their profiles, and enter the HashFame ecosystem."
+      },
+      {
+        title: "Campaign Directory",
+        description: "Designed the campaign discovery interface, enabling creators to explore available brand campaigns and understand campaign opportunities."
+      },
+      {
+        title: "Web Application",
+        description: "Designed product screens and web application experiences, translating core HashFame features into structured, accessible interfaces."
+      }
+    ],
+
+    designFocus:[
+      "Simplifying creator journeys.",
+      "Organising information and content hierarchy.",
+      "Creating intuitive navigation and interactions.",
+      "Maintaining consistency across mobile and web experiences."
+    ],
+
+    outcome: "Contributed to the design of core HashFame product experiences across mobile and web, extending the platform beyond its marketing website into functional product interfaces."
+
+}
 
 
 

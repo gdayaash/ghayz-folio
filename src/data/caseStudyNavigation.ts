@@ -8,6 +8,7 @@ export const caseStudyOrder: CaseStudySlug[] = [
   "website",
   "nexusAi",
   "marketingVisuals",
+  "productDesign"
 ];
 
 export function getAdjacentCaseStudy(currentSlug: CaseStudySlug) {
@@ -31,6 +32,8 @@ export function getAdjacentCaseStudy(currentSlug: CaseStudySlug) {
     complexAi: "/case-study/complexAi",
     nexusAi: "/case-study/nexusAi",
     marketingVisuals: "/case-study/marketing-visuals",
+    productDesign: "/case-study/product-design",
+
   };
 
   return {

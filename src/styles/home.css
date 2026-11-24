@@ -273,6 +273,7 @@
 
   .timeline-section-gradient-effect {
     padding: 50px 40px;
+    background: none;
   }
 
   .glass-card {
@@ -290,10 +291,8 @@
   .y-folio__timeline-gradient-circle {
     right: -250px;
     bottom: -400px;
-
     width: 600px;
     height: 600px;
-
     filter: blur(80px);
   }
 
@@ -319,7 +318,7 @@
   }
 
   .timeline-section-wrapper{
-      background: linear-gradient(
+    background: linear-gradient(
     358deg,
     #0b855e 45%,
     #086145 64%,

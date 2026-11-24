@@ -56,6 +56,15 @@ const works = [
        link: "/case-study/marketing-visuals"  
 
   },
+  {
+    id: 7,
+    title: "Building the Creator Experience",
+    description:
+      "HashFame — Product Design",
+       image: "/images/works/marketing-visuals.png",
+       link: "/case-study/product-design"  
+
+  },
 ];
 
 
@@ -346,6 +355,24 @@ export default function SelectedWorksScene() {
 
             />
           </div>
+
+          {/* Seventh card: left */}
+          <div
+            className="
+              y-folio__selected-work-card-slot
+              y-folio__selected-work-card-slot--left
+              y-folio__selected-work-card-slot--row-7
+            "
+          >
+            <SelectedWorkCard
+              title={works[6].title}
+              description={works[6].description}
+              image={works[6].image}
+              link={works[6].link}
+            />
+          </div>
+
+
           
         </div>
       </div>
